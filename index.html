@@ -1,84 +1,91 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <script src="https://kit.fontawesome.com/12605baa4d.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NoBug</title>
+    <title>login</title>
     <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-<body class="main">
-   
-       <div class="header">
-            <h1 class="logo">NoBug</h1>
-            <div class="opcKbc">
-                <a href="index.html"><button class="btnma"><p class="text1">Home</p></button></a>
-                <a href="login.html"> <button class="btnma"><p>My Account</p></button></a>
-                <div class="sacola">
-                    <button class="sacola"><i class='bx bx-shopping-bag'></i></button>
-                </div>
-                
-        </div>
-      </div>
+
+<body>
      
-      <div  class="wrapper">
-        <aside class="aside aside1">  
-            <button class="btn">
-                <img src="camisetabranca.webp">
-                <h3>Camisa Branca</h3>
-                <h3>R$79,90</h3>
-            </button>
-        </aside>
-        <aside class="aside aside2">
-            <button class="btn">
-                <img src="CamisaPreta2.webp">
-                <h3>Camisa Preta</h3>
-                <h3>R$79,90</h3>
-            </button>
-        </aside>
-        <aside class="aside aside3">
-            <button class="btn">
-                <img src="Camsietacinza.webp">
-                <h3>Camisa Cinza</h3>
-                <h3>R$79,90</h3>
-            </button>
-        </aside>
-        <aside class="aside aside4">
-           <button class="btn"> 
-                <img src="bermudajeans.webp">
-                <h3>Bermuda Jeans</h3>
-                <h3>R$149,90</h3>
-        </button>
-        </aside>
-        <aside class="aside aside5">
-            <button class="btn">
-                <img src="calcajeans.webp">
-                <h3>Calça Jeans Baggy</h3>
-                <h3>R$179,90</h3>
-            </button>
-        </aside>
-    </div>
-    <div>
-        <footer class="footer">
-            <div class="trade">
-                <button class="buttont"><h3>TROCAS E DEVOLUÇÕES</h3></button>
+    <div class="container">
+        <form action="">
+            <div class="row">
+                <div class="column">
+                    <h3 class="title">Informações pessoais</h3>
+                    <div class="input-box">
+                        <span>Nome Completo :</span>
+                        <input type="text" placeholder="João da Silva">
+                    </div>
+                    <div class="input-box">
+                        <span>Email :</span>
+                        <input type="email" placeholder="exemplo@exemplo.com">
+                    </div>
+                    <div class="input-box">
+                        <span>Endereço :</span>
+                        <input type="Text" placeholder="Rua">
+                    </div>
+                    <div class="flex">
+                        <div class="input-box">
+                            <span>Numero</span>
+                            <input type="text" placeholder="numero">
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <span>Cidade :</span>
+                        <input type="Text" placeholder="São Paulo">
+                    </div>
+                    <div class="flex">
+                        <div class="input-box">
+                            <span>País :</span>
+                            <input type="text" placeholder="Brasil">
+                        </div>
+                        <div class="input-box">
+                            <span>CEP :</span>
+                            <input type="number" placeholder="00000-000">
+                        </div>                    
+                    </div>  
+                </div>
+
+                <div class="column">
+                    <h3 class="title"> Pagamento</h3>
+                    <div class="input-box">
+                        <span>Cards Accepted :</span>
+                        <img src="image.png" alt="">
+                    </div>
+                    <div class="input-box">
+                        <span>Titular do Cartão :</span>
+                        <input type="text" placeholder="João Da Silva">
+                    </div>
+                    <div class="input-box">
+                        <span>Numero do Cartão :</span>
+                        <input type="number" placeholder="1111 2222 3333 4444">
+                    </div>
+                    <div class="input-box">
+                        <span>Mês do Vencimento :</span>
+                        <input type="Text" placeholder="Agosto">
+                    </div>
+
+                    <div class="flex">
+                        <div class="input-box">
+                            <span>Ano do Vencimento :</span>
+                            <input type="number" placeholder="2025">
+                        </div>
+                        <div class="input-box">
+                            <span>CVV :</span>
+                            <input type="number" placeholder="123">
+                        </div>                    
+                    </div>  
+                </div>
             </div>
-         <button class="btn">
-                <a href="https://www.instagram.com/nobugg7/">
-                <i class="fa-brands fa-instagram fa-2x"></i>
-            </a>
-        </button>
-        
-            <button class="btn">
-                <i class="fa-brands fa-whatsapp fa-2x"></i>
-            </button>
-            <button class="btn">
-                <i class="fa-regular fa-envelope fa-2x"></i>
-            </button>
-            <p class="direitos">Todos os direitos reservados à NoBug</p>
-        </footer>
-    </div>    
-   
+
+            <button type="submit" class="btn">submit</button>
+        </form>
+    </div>
+
 </body>
+
 </html>
