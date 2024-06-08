@@ -62,11 +62,12 @@
     z-index: 1;
 }
 .footer{
-    height: 170px;
+    height: 140px;
     text-align: center;
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
+    margin-top: 50px;
 }
 .main{
     text-align: left;
@@ -170,7 +171,8 @@
     text-align: center;   
     font-style: italic;
     margin-bottom: 20px;
-    font-family:'sans-serif'
+    font-family:'sans-serif';
+    font-weight: bold;
 }
 
 .caminho{
@@ -200,17 +202,16 @@ p{
     font-size: 24px;
 }
 
-main {
-    background-color: #fff;
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 16s00px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    line-height: 1.5;
-   h1{
-        text-align: center;
+.troca{
+    text-align: center;}
 
-   }
+    .policy{
+    margin-left: 100px;
+    margin-right:100px;
+    margin-bottom: 30px;
+    p{
+        font-family: 'sans-serif';
+        padding-left: 25px;
+    }
 
-}
+    }
