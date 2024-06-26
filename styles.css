@@ -278,7 +278,7 @@ header .navbar-toggler-icon {
 
 /* Footer Styles */
 footer {
-    background-color: #ffffff;
+    
     border-top: 1px solid #e5e5e5;
 }
 
@@ -349,16 +349,19 @@ footer .social-icons img {
 }
 
 /*Página de compras*/
-.container {
+.con {
     display: flex;
     justify-content: center;
-    min-width: 70vh;
+    margin-top: 80px;
+    min-height: 65vh;
+    padding: 10px;
 }
 
-.container form{
-    width: 700px;
+.con form{
+    height: 700px;
+    width: 1000px;
     padding: 40px;
-    background: #e4e4e4;
+    background: #ccccccab;
     border-radius: 10px;
 }
 
@@ -391,7 +394,7 @@ form .row {
 .input-box input{
     width: 100%;
     padding: 10px 15px;
-    border: 1px solid #ccc;
+    border: 0px solid #000000;
     border-radius: 6px;
     font-size: 15px;
 }
@@ -411,20 +414,20 @@ form .row {
     filter: drop-shadow(0 0 1px #000);
 }
 
-form .btn{
+form .btn-finalizar{
     width: 100%;
     padding: 12px;
-    background: pink;
+    background: #000000;
     border: none;
     outline: none;
     border-radius: 6px;
     font-size: 17px;
-    color: #f5f5f5;
+    color: #ffffff;
     margin-top: 5px;
     cursor: pointer;
 }
 
-form .btn:hover{
-    background: #000;
+form .btn-finalizar:hover{
+    background: #6b6b6b;
 }
 
