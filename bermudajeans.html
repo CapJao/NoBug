@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoBug - Produto</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head> 
+<body>
+    <!-- Notification Banner -->
+    <div id="notificationBanner" class="notification-banner">
+        <span id="notificationMessage" class="text-success"></span>
+        <button type="button" class="close" aria-label="Close" id="closeNotification">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+    <!-- Header Section -->
+    <header class="container-fluid p-3 border-bottom">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex">
+                <a href="#" class="mr-3">Home</a>
+                <a href="#">My Account</a>
+            </div>
+            <div class="text-center">
+                <img src="assets/img/logo/logo.png" alt="NoBug Logo" class="img-fluid logo">
+            </div>
+            <div class="d-flex justify-content-end align-items-center">
+                <a href="#" id="cart-icon" data-toggle="modal" data-target="#cartModal">
+                    <img src="assets/img/icon/carrinho.png" width="35" alt="Cart" class="img-fluid">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cart Modal -->
+    <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cartModalLabel">Carrinho de Compras</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Seu carrinho está vazio.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-claro">Limpar Carrinho</button>
+                    <button type="button" class="btn btn-comprar">Finalizar Compra</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- Size Selection Modal -->
+     <div class="modal fade" id="sizeModal" tabindex="-1" role="dialog" aria-labelledby="sizeModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="sizeModalLabel">Selecione o Tamanho</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="sizeForm">
+                        <div class="form-group">
+                            <label for="sizeSelect">Tamanho</label>
+                            <select class="form-control" id="sizeSelect">
+                                <option value="P">P</option>
+                                <option value="M">M</option>
+                                <option value="G">G</option>
+                                <option value="GG">GG</option>
+                            </select>
+                        </div>
+                        <input type="hidden" id="productName">
+                        <input type="hidden" id="productPrice">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-claro">Cancelar</button>
+                    <button type="button" class="btn btn-comprar">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Product Detail Section -->
+    <main class="container my-5">
+        <div class="row">
+            <div class="col-md-6 text-center">
+                <img src="assets/img/products/product (3).png" alt="Bermuda Jeans Baggy" class="img-fluid product-image">
+            </div>
+            <div class="col-md-6">
+                <h1 class="h2">Bermuda Jeans Baggy</h1>
+                <p class="h4 text-muted">R$ 149,90</p>
+                <div class="d-flex align-items-center mb-3">
+                    <span class="mr-2">★★★★★</span>
+                    <span>(32 Avaliações)</span>
+                </div>
+                <p>em até 3x no cartão sem juros</p>
+                <div class="mb-3">
+                    <button class="btn btn-outline-secondary size-btn">38</button>
+                    <button class="btn btn-outline-secondary size-btn">40</button>
+                    <button class="btn btn-outline-secondary size-btn">42</button>
+                    <button class="btn btn-outline-secondary size-btn">44</button>
+                    <button class="btn btn-outline-secondary size-btn">46</button>
+                </div>
+                <div class="d-flex align-items-center mb-3">
+                    <div class="input-group quantity-box mr-3">
+                        <div class="input-group-prepend">
+                            <button class="btn btn-outline-secondary quantity-btn" type="button">-</button>
+                        </div>
+                        <input type="text" class="form-control text-center" value="1">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary quantity-btn" type="button">+</button>
+                        </div>
+                    </div>
+                    <button class="btn btn-comprar">Comprar</button>
+                </div>
+                <div class="mt-3">
+                    <input type="text" class="form-control mb-2" placeholder="CEP">
+                    <button class="btn btn-calcular">Calcular</button>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <h3 class="h5">Tabela de medidas</h3>
+                <ul>
+                    <li>38: Comprimento 54 x Cintura 72</li>
+                    <li>40: Comprimento 54 x Cintura 74 </li>
+                    <li>42: Comprimento 55 x Cintura 75</li>
+                    <li>44: Comprimento 55 x Cintura 75</li>
+                    <li>46: Comprimento 56 x Cintura 76</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h3 class="h5">Composição</h3>
+                <p>73% algodão, 27% poliéster
+                </p>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-4 text-center">
+                <img src="assets/img/products/product (4).png" alt="Calça Jeans Baggy" class="img-fluid">
+                <p class="mt-2">Calça Jeans Baggy</p>
+                <p>R$ 179,90</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <img src="assets/img/products/product (5).png" alt="Camisa Básica Preta" class="img-fluid">
+                <p class="mt-2">Camisa Básica Preta</p>
+                <p>R$ 79,90</p>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer Section -->
+    <footer class="text-center py-5">
+        <p class="mb-1">TROCAS E DEVOLUÇÕES</p>
+        <div class="social-icons mb-3">
+            <a href="#"><img src="assets/img/icon/whats.png" width="30" alt="WhatsApp"></a>
+            <a href="#"><img src="assets/img/icon/mail.png" width="30" alt="Email"></a>
+            <a href="#"><img src="assets/img/icon/instagram.png" width="30" alt="Instagram"></a>
+        </div>
+        <p>Todos os direitos reservados à NoBug.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="assets/js/adicionarProdutoCarrinho.js"></script>
+</body>
+</html>
