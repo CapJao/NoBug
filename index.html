@@ -1,167 +1,167 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> <!-- Início do documento HTML com a especificação de idioma para inglês -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NoBug</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8"> <!-- Meta tag para especificar o conjunto de caracteres UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Meta tag para ajustar a escala inicial e o dimensionamento da viewport -->
+    <title>NoBug</title> <!-- Título da página -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> <!-- Link para importar o CSS do Bootstrap versão 4.0.0 -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap" rel="stylesheet"> <!-- Link para importar a fonte Poppins em diferentes pesos -->
+    <link rel="stylesheet" href="styles.css"> <!-- Link para o arquivo CSS local styles.css -->
 </head>
-<body>
+<body> <!-- Corpo do documento HTML -->
     <!-- Notification Banner -->
-    <div id="notificationBanner" class="notification-banner">
-        <span id="notificationMessage" class="text-success"></span>
-        <button type="button" class="close" aria-label="Close" id="closeNotification">
-            <span aria-hidden="true">&times;</span>
+    <div id="notificationBanner" class="notification-banner"> <!-- Banner de notificação -->
+        <span id="notificationMessage" class="text-success"></span> <!-- Mensagem de notificação -->
+        <button type="button" class="close" aria-label="Close" id="closeNotification"> <!-- Botão para fechar a notificação -->
+            <span aria-hidden="true">&times;</span> <!-- Ícone de fechar (×) -->
         </button>
     </div>
 
     <!-- Header Section -->
-    <header class="container-fluid p-3 border-bottom">
-        <div class="d-flex justify-content-between align-items-center">
-            <button class="navbar-toggler d-block d-md-none" type="button">
-                <span class="navbar-toggler-icon"></span>
+    <header class="container-fluid p-3 border-bottom"> <!-- Cabeçalho -->
+        <div class="d-flex justify-content-between align-items-center"> <!-- Container flexível com justificação e alinhamento -->
+            <button class="navbar-toggler d-block d-md-none" type="button"> <!-- Botão de alternância da barra de navegação para telas menores -->
+                <span class="navbar-toggler-icon"></span> <!-- Ícone do botão de alternância da barra de navegação -->
             </button>
-            <div class="d-none d-md-flex">
-                <a href="#" class="mr-3">Home</a>
-                <a href="#">My Account</a>
+            <div class="d-none d-md-flex"> <!-- Divisão para links de navegação visíveis apenas em telas médias e grandes -->
+                <a href="#" class="mr-3">Home</a> <!-- Link para a página inicial -->
+                <a href="#">My Account</a> <!-- Link para a conta do usuário -->
             </div>
-            <div class="text-center flex-grow-1">
-                <img src="assets/img/logo/logo.png" alt="NoBug Logo" class="img-fluid logo">
+            <div class="text-center flex-grow-1"> <!-- Divisão para o centro do cabeçalho com crescimento flexível -->
+                <img src="assets/img/logo/logo.png" alt="NoBug Logo" class="img-fluid logo"> <!-- Logo da NoBug, imagem fluida -->
             </div>
-            <div class="d-flex justify-content-end align-items-center">
-                <a href="#" id="cart-icon" data-toggle="modal" data-target="#cartModal">
-                    <img src="assets/img/icon/carrinho.png" width="35" alt="Cart" class="img-fluid">
+            <div class="d-flex justify-content-end align-items-center"> <!-- Divisão para elementos à direita do cabeçalho com justificação e alinhamento -->
+                <a href="#" id="cart-icon" data-toggle="modal" data-target="#cartModal"> <!-- Link para abrir o modal do carrinho de compras -->
+                    <img src="assets/img/icon/carrinho.png" width="35" alt="Cart" class="img-fluid"> <!-- Ícone do carrinho de compras -->
                 </a>
             </div>
         </div>
-    </header>
+    </header> <!-- Fim do cabeçalho -->
     
     <!-- Popup Menu -->
-    <div id="popupMenu" class="popup-menu">
-        <button class="close-btn">
-            <img src="assets/img/icon/close.png" alt="Close" class="img-fluid">
+    <div id="popupMenu" class="popup-menu"> <!-- Menu popup -->
+        <button class="close-btn"> <!-- Botão de fechar -->
+            <img src="assets/img/icon/close.png" alt="Close" class="img-fluid"> <!-- Ícone de fechar -->
         </button>
-        <div class="popup-content">
-            <a href="#">Home</a>
-            <a href="#">Minha Conta</a>
-            <a href="#">Trocas e Devoluções</a>
-            <div class="social-icons mt-5">
-                <a href="#"><img src="assets/img/icon/whats.png" width="30" alt="WhatsApp"></a>
-                <a href="#"><img src="assets/img/icon/mail.png" width="30" alt="Email"></a>
-                <a href="#"><img src="assets/img/icon/instagram.png" width="30" alt="Instagram"></a>
+        <div class="popup-content"> <!-- Conteúdo do menu popup -->
+            <a href="#">Home</a> <!-- Link para a página inicial -->
+            <a href="#">Minha Conta</a> <!-- Link para a conta do usuário -->
+            <a href="#">Trocas e Devoluções</a> <!-- Link para a página inicial -->
+            <div class="social-icons mt-5"> <!-- Ícones de redes sociais -->
+                <a href="#"><img src="assets/img/icon/whats.png" width="30" alt="WhatsApp"></a> <!-- Ícone do WhatsApp -->
+                <a href="#"><img src="assets/img/icon/mail.png" width="30" alt="Email"></a> <!-- Ícone de Email -->
+                <a href="#"><img src="assets/img/icon/instagram.png" width="30" alt="Instagram"></a> <!-- Ícone do Instagram -->
             </div>
         </div>
     </div>
         
-    <!-- Product Section -->
+    <!-- Seção de Produtos -->
     <main class="container my-5">
-        <div class="row">
-            <div class="col-md-4 text-center product-box">
-                <img src="assets/img/products/product (1).png" alt="Camiseta Básica Branca" class="img-fluid product-image">
-                <h2 class="h5 mt-3">Camiseta Básica Branca</h2>
-                <p>R$79,90</p>
-                <button class="btn btn-comprar" data-toggle="modal" data-target="#sizeModal" data-name="Camiseta Básica Branca" data-price="79.90">Comprar</button>
+        <div class="row">  
+            <div class="col-md-4 text-center product-box"> <!-- Produto 1 -->
+                <img src="assets/img/products/product (1).png" alt="Camiseta Básica Branca" class="img-fluid product-image"> <!-- Imagem do produto 1 -->
+                <h2 class="h5 mt-3">Camiseta Básica Branca</h2> <!-- Nome do produto 1 -->
+                <p>R$79,90</p> <!-- Preço do produto 1 -->
+                <button class="btn btn-comprar" data-toggle="modal" data-target="#sizeModal" data-name="Camiseta Básica Branca" data-price="79.90">Comprar</button> <!-- Botão para comprar o produto 1 -->
             </div>
-            <div class="col-md-4 text-center product-box">
-                <img src="assets/img/products/product (2).png" alt="Camiseta Básica Preta" class="img-fluid product-image">
-                <h2 class="h5 mt-3">Camiseta Básica Preta</h2>
-                <p>R$79,90</p>
-                <button class="btn btn-comprar" data-toggle="modal" data-target="#sizeModal" data-name="Camiseta Básica Preta" data-price="79.90">Comprar</button>
+            <div class="col-md-4 text-center product-box"> <!-- Produto 2 -->
+                <img src="assets/img/products/product (2).png" alt="Camiseta Básica Preta" class="img-fluid product-image"> <!-- Imagem do produto 2 -->
+                <h2 class="h5 mt-3">Camiseta Básica Preta</h2> <!-- Nome do produto 2 -->
+                <p>R$79,90</p> <!-- Preço do produto 2 -->
+                <button class="btn btn-comprar" data-toggle="modal" data-target="#sizeModal" data-name="Camiseta Básica Preta" data-price="79.90">Comprar</button> <!-- Botão para comprar o produto 2 -->
             </div>
-            <div class="col-md-4 text-center product-box">
-                <img src="assets/img/products/product (5).png" alt="Camiseta Básica Cinza" class="img-fluid product-image">
-                <h2 class="h5 mt-3">Camiseta Básica Cinza</h2>
-                <p>R$79,90</p>
-                <button class="btn btn-comprar" data-toggle="modal" data-target="#sizeModal" data-name="Camiseta Básica Cinza" data-price="79.90">Comprar</button>
+            <div class="col-md-4 text-center product-box"> <!-- Produto 3 -->
+                <img src="assets/img/products/product (5).png" alt="Camiseta Básica Cinza" class="img-fluid product-image"> <!-- Imagem do produto 3 -->
+                <h2 class="h5 mt-3">Camiseta Básica Cinza</h2>  <!-- Nome do produto 3 -->
+                <p>R$79,90</p> <!-- Preço do produto 3 -->
+                <button class="btn btn-comprar" data-toggle="modal" data-target="#sizeModal" data-name="Camiseta Básica Cinza" data-price="79.90">Comprar</button> <!-- Botão para comprar o produto 3 -->
             </div>
         </div>
-        <div class="row mt-5">
+        <div class="row mt-5"> <!-- Produto 4 -->
             <div class="col-md-4 text-center product-box">
-                <img src="assets/img/products/product (4).png" alt="Calça Jeans Baggy" class="img-fluid product-image">
-                <h2 class="h5 mt-3">Calça Jeans Baggy</h2>
-                <p>R$179,90</p>
-                <button class="btn btn-comprar" data-toggle="modal" data-target="#sizeModal" data-name="Calça Jeans Baggy" data-price="179.90">Comprar</button>
+                <img src="assets/img/products/product (4).png" alt="Calça Jeans Baggy" class="img-fluid product-image"> <!-- Imagem do produto 4 -->
+                <h2 class="h5 mt-3">Calça Jeans Baggy</h2> <!-- Nome do produto 4 -->
+                <p>R$179,90</p> <!-- Preço do produto 4 -->
+                <button class="btn btn-comprar" data-toggle="modal" data-target="#sizeModal" data-name="Calça Jeans Baggy" data-price="179.90">Comprar</button>  <!-- Botão para comprar o produto 4 -->
             </div>
-            <div class="col-md-4 text-center product-box">
-                <img src="assets/img/products/product (3).png" alt="Bermuda Jeans Baggy" class="img-fluid product-image">
-                <h2 class="h5 mt-3">Bermuda Jeans Baggy</h2>
-                <p>R$149,90</p>
-                <button class="btn btn-comprar" data-toggle="modal" data-target="#sizeModal" data-name="Bermuda Jeans Baggy" data-price="149.90">Comprar</button>
+            <div class="col-md-4 text-center product-box"> <!-- Produto 5 -->
+                <img src="assets/img/products/product (3).png" alt="Bermuda Jeans Baggy" class="img-fluid product-image"> <!-- Imagem do produto 5 -->
+                <h2 class="h5 mt-3">Bermuda Jeans Baggy</h2> <!-- Nome do produto 5 -->
+                <p>R$149,90</p> <!-- Preço do produto 5 -->
+                <button class="btn btn-comprar" data-toggle="modal" data-target="#sizeModal" data-name="Bermuda Jeans Baggy" data-price="149.90">Comprar</button> <!-- Botão para comprar o produto 5 -->
             </div>
         </div>
     </main>
     
     <!-- Footer Section -->
-    <footer class="text-center py-5">
+    <footer class="text-center py-5"> <!-- Seção de Trocas e Devoluções no rodapé -->
         <p class="mb-1">TROCAS E DEVOLUÇÕES</p>
-        <div class="social-icons mb-3">
-            <a href="#"><img src="assets/img/icon/whats.png" width="30" alt="WhatsApp"></a>
-            <a href="#"><img src="assets/img/icon/mail.png" width="30" alt="Email"></a>
-            <a href="#"><img src="assets/img/icon/instagram.png" width="30" alt="Instagram"></a>
+        <div class="social-icons mb-3">  <!-- Ícones de redes sociais no rodapé -->
+            <a href="#"><img src="assets/img/icon/whats.png" width="30" alt="WhatsApp"></a> <!-- Ícone do WhatsApp -->
+            <a href="#"><img src="assets/img/icon/mail.png" width="30" alt="Email"></a> <!-- Ícone de Email -->
+            <a href="#"><img src="assets/img/icon/instagram.png" width="30" alt="Instagram"></a> <!-- Ícone do Instagram -->
         </div>
-        <div class="direitos"><p>Todos os direitos reservados à NoBug.</p></div>
+        <p>Todos os direitos reservados à NoBug.</p> <!-- Declaração de direitos autorais -->
     </footer>
 
-    <!-- Cart Modal -->
-    <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="cartModalLabel">Carrinho de Compras</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
+    <!-- Modal do Carrinho -->
+    <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">  <!-- Início do modal de carrinho de compras, com fade para animação de aparecimento -->
+        <div class="modal-dialog" role="document"> <!-- Caixa de diálogo do modal -->
+            <div class="modal-content">  <!-- Conteúdo do modal -->
+                <div class="modal-header"> <!-- Cabeçalho do modal -->
+                    <h5 class="modal-title" id="cartModalLabel">Carrinho de Compras</h5>  <!-- Título do modal -->
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <!-- Botão para fechar o modal -->
+                        <span aria-hidden="true">&times;</span> <!-- Ícone de fechar (x) -->
                     </button>
                 </div>
-                <div class="modal-body">
-                    <p>Seu carrinho está vazio.</p>
+                <div class="modal-body"> <!-- Corpo do modal -->
+                    <p>Seu carrinho está vazio.</p> <!-- Mensagem indicando que o carrinho está vazio -->
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-comprar" id="clearCartButton">Limpar Carrinho</button>
-                    <button type="button" class="btn btn-comprar">Finalizar Compra</button>
+                <div class="modal-footer"> <!-- Rodapé do modal -->
+                    <button type="button" class="btn btn-comprar" id="clearCartButton">Limpar Carrinho</button> <!-- Botão para limpar o carrinho -->
+                    <button type="button" class="btn btn-comprar">Finalizar Compra</button> <!-- Botão para finalizar a compra -->
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Size Selection Modal -->
-    <div class="modal fade" id="sizeModal" tabindex="-1" role="dialog" aria-labelledby="sizeModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="sizeModalLabel">Selecione o Tamanho</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
+    <!-- Modal de Seleção de Tamanho -->
+    <div class="modal fade" id="sizeModal" tabindex="-1" role="dialog" aria-labelledby="sizeModalLabel" aria-hidden="true">   <!-- Início do modal para seleção de tamanho, com fade para animação de aparecimento -->
+        <div class="modal-dialog" role="document"> <!-- Caixa de diálogo do modal -->
+            <div class="modal-content"> <!-- Conteúdo do modal -->
+                <div class="modal-header"> <!-- Cabeçalho do modal -->
+                    <h5 class="modal-title" id="sizeModalLabel">Selecione o Tamanho</h5> <!-- Título do modal -->
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <!-- Botão para fechar o modal -->
+                        <span aria-hidden="true">&times;</span> <!-- Ícone de fechar (x) -->
                     </button>
                 </div>
-                <div class="modal-body">
-                    <form id="sizeForm">
-                        <div class="form-group">
-                            <label for="sizeSelect">Tamanho</label>
-                            <select class="form-control" id="sizeSelect">
-                                <option value="P">P</option>
-                                <option value="M">M</option>
-                                <option value="G">G</option>
-                                <option value="GG">GG</option>
+                <div class="modal-body"> <!-- Corpo do modal -->
+                    <form id="sizeForm"> <!-- Formulário para seleção de tamanho -->
+                        <div class="form-group"> <!-- Grupo de formulário para o seletor de tamanho -->
+                            <label for="sizeSelect">Tamanho</label> <!-- Rótulo para o seletor de tamanho -->
+                            <select class="form-control" id="sizeSelect"> <!-- Seletor de tamanho -->
+                                <option value="P">P</option> <!-- Opção de tamanho P -->
+                                <option value="M">M</option> <!-- Opção de tamanho M -->
+                                <option value="G">G</option> <!-- Opção de tamanho G -->
+                                <option value="GG">GG</option> <!-- Opção de tamanho GG -->
                             </select>
                         </div>
-                        <input type="hidden" id="productName">
-                        <input type="hidden" id="productPrice">
+                        <input type="hidden" id="productName"> <!-- Campo oculto para armazenar o nome do produto -->
+                        <input type="hidden" id="productPrice"> <!-- Campo oculto para armazenar o preço do produto -->
                     </form>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-claro">Cancelar</button>
-                    <button type="button" class="btn btn-comprar">Adicionar ao Carrinho</button>
+                <div class="modal-footer"> <!-- Rodapé do modal -->
+                    <button type="button" class="btn btn-claro">Cancelar</button> <!-- Botão para cancelar a seleção -->
+                    <button type="button" class="btn btn-comprar">Adicionar ao Carrinho</button> <!-- Botão para adicionar o produto ao carrinho -->
                 </div>
             </div>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script> <!-- Importação do jQuery (biblioteca JavaScript) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script> <!-- Importação do Popper.js (biblioteca de posicionamento de elementos) -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> <!-- Importação do Bootstrap JavaScript (biblioteca de componentes visuais) -->
+    <script src="assets/js/adicionarProdutoCarrinho.js"></script> <!-- Importação do script personalizado para adicionar produtos ao carrinho -->
+    <script src="assets/js/abrirFecharMenuHamburger.js"></script><!-- Importação do script personalizado para abrir e fechar o menu hamburger -->
+</body> <!-- Fim do corpo do documento HTML -->
+</html> <!-- Fim do documento HTML -->
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="assets/js/adicionarProdutoCarrinho.js"></script>
-    <script src="assets/js/abrirFecharMenuHamburger.js"></script>
-</body>
-</html>
