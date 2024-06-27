@@ -1,183 +1,185 @@
+    <!-- Essa é uma página de exemplo, ela contém cabeçalho e rodapé apenas -->
+
     <!DOCTYPE html>
     <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>NoBug - Produto</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="styles.css">
+        <meta charset="UTF-8"> <!-- Definição do conjunto de caracteres UTF-8 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Meta tag para responsividade -->
+        <title>NoBug - Produto</title> <!-- Título da página -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> <!-- Bootstrap CSS -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"> <!-- Fonte Poppins -->
+        <link rel="stylesheet" href="styles.css"> <!-- Arquivo de estilo personalizado -->
     </head>
     <body>
         <!-- Notification Banner -->
         <div id="notificationBanner" class="notification-banner">
-            <span id="notificationMessage" class="text-success"></span>
+            <span id="notificationMessage" class="text-success"></span> <!-- Mensagem de notificação -->
             <button type="button" class="close" aria-label="Close" id="closeNotification">
-                <span aria-hidden="true">&times;</span>
+                <span aria-hidden="true">&times;</span> <!-- Botão para fechar a notificação -->
             </button>
         </div>
     
         <!-- Header Section -->
-        <header class="container-fluid p-3 border-bottom">
-            <div class="d-flex justify-content-between align-items-center">
-                <div class="d-flex">
-                    <a href="#" class="mr-3">Home</a>
-                    <a href="#">My Account</a>
+        <header class="container-fluid p-3 border-bottom"> <!-- Início do cabeçalho -->
+            <div class="d-flex justify-content-between align-items-center"><!-- Container flexível com alinhamento justificado e itens centralizados -->
+                <div class="d-flex"> <!-- Container flexível para os links -->
+                    <a href="#" class="mr-3">Home</a> <!-- Link para a página inicial -->
+                    <a href="#">My Account</a> <!-- Link para a conta do usuário -->
                 </div>
-                <div class="text-center">
+                <div class="text-center"> <!-- Centro do cabeçalho com o logo da NoBug -->
                     <img src="assets/img/logo/logo.png" alt="NoBug Logo" class="img-fluid logo">
                 </div>
-                <div class="d-flex justify-content-end align-items-center">
-                    <a href="#" id="cart-icon" data-toggle="modal" data-target="#cartModal">
-                        <img src="assets/img/icon/carrinho.png" width="35" alt="Cart" class="img-fluid">
+                <div class="d-flex justify-content-end align-items-center">  <!-- Container flexível para alinhamento à direita e centralização vertical -->
+                    <a href="#" id="cart-icon" data-toggle="modal" data-target="#cartModal"> <!-- Ícone do carrinho com acionamento de modal -->
+                        <img src="assets/img/icon/carrinho.png" width="35" alt="Cart" class="img-fluid"> <!-- Imagem do íconde do carrinho-->
                     </a>
                 </div>
             </div>
         </header>
     
         <!-- Cart Modal -->
-        <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="cartModalLabel">Carrinho de Compras</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
+        <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true"> <!-- Modal com efeito de fade, identificado pelo ID cartModal -->
+            <div class="modal-dialog" role="document"> <!-- Caixa de diálogo do modal -->
+                <div class="modal-content"> <!-- Conteúdo do modal -->
+                    <div class="modal-header"> <!-- Cabeçalho do modal -->
+                        <h5 class="modal-title" id="cartModalLabel">Carrinho de Compras</h5> <!-- Título do modal -->
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <!-- Botão de fechar o modal -->
+                            <span aria-hidden="true">&times;</span> <!-- Ícone de fechar (X) -->
                         </button>
                     </div>
-                    <div class="modal-body">
-                        <p>Seu carrinho está vazio.</p>
+                    <div class="modal-body"> <!-- Corpo do modal -->
+                        <p>Seu carrinho está vazio.</p> <!-- Mensagem indicando que o carrinho está vazio -->
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-claro">Limpar Carrinho</button>
-                        <button type="button" class="btn btn-comprar">Finalizar Compra</button>
+                    <div class="modal-footer"> <!-- Rodapé do modal -->
+                        <button type="button" class="btn btn-claro">Limpar Carrinho</button> <!-- Botão para limpar o carrinho -->
+                        <button type="button" class="btn btn-comprar">Finalizar Compra</button> <!-- Botão para finalizar a compra -->
                     </div>
                 </div>
             </div>
         </div>
     
          <!-- Size Selection Modal -->
-         <div class="modal fade" id="sizeModal" tabindex="-1" role="dialog" aria-labelledby="sizeModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="sizeModalLabel">Selecione o Tamanho</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
+         <div class="modal fade" id="sizeModal" tabindex="-1" role="dialog" aria-labelledby="sizeModalLabel" aria-hidden="true"> <!-- Modal com efeito de fade, identificado pelo ID sizeModal -->
+            <div class="modal-dialog" role="document"> <!-- Caixa de diálogo do modal -->
+                <div class="modal-content"> <!-- Conteúdo do modal -->
+                    <div class="modal-header"> <!-- Cabeçalho do modal -->
+                        <h5 class="modal-title" id="sizeModalLabel">Selecione o Tamanho</h5> <!-- Título do modal -->
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <!-- Botão de fechar o modal -->
+                            <span aria-hidden="true">&times;</span> <!-- Ícone de fechar (X) -->
                         </button>
                     </div>
-                    <div class="modal-body">
-                        <form id="sizeForm">
-                            <div class="form-group">
-                                <label for="sizeSelect">Tamanho</label>
-                                <select class="form-control" id="sizeSelect">
+                    <div class="modal-body"> <!-- Corpo do modal -->
+                        <form id="sizeForm"> <!-- Formulário para seleção do tamanho -->
+                            <div class="form-group">  <!-- Grupo de formulário -->
+                                <label for="sizeSelect">Tamanho</label> <!-- Rótulo para a seleção de tamanho -->
+                                <select class="form-control" id="sizeSelect"> <!-- Lista de seleção de tamanho -->
                                     <option value="P">P</option>
                                     <option value="M">M</option>
                                     <option value="G">G</option>
                                     <option value="GG">GG</option>
-                                </select>
+                                </select> <!-- Seleção de tamanho -->
                             </div>
-                            <input type="hidden" id="productName">
-                            <input type="hidden" id="productPrice">
+                            <input type="hidden" id="productName"> <!-- Campo oculto para o nome do produto -->
+                            <input type="hidden" id="productPrice"> <!-- Campo oculto para o preço do produto -->
                         </form>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-claro">Cancelar</button>
-                        <button type="button" class="btn btn-comprar">Adicionar ao Carrinho</button>
+                    <div class="modal-footer"> <!-- Rodapé do modal -->
+                        <button type="button" class="btn btn-claro">Cancelar</button> <!-- Botão para cancelar a seleção -->
+                        <button type="button" class="btn btn-comprar">Adicionar ao Carrinho</button> <!-- Botão para adicionar o produto selecionado ao carrinho -->
                     </div>
                 </div>
             </div>
         </div>
         
-        <div class="con"><!-- container!-->
-            <form action="">
-                <div class="row">
-                    <div class="column">
-                        <h3 class="title">Informações Pessoais</h3>
-                        <div class="input-box">
-                            <span>Nome Completo :</span>
-                            <input type="text" placeholder="João da Silva">
-                        </div>
-                        <div class="input-box">
-                            <span>E-mail :</span>
-                            <input type="text" placeholder="Exemplo@email.com">
-                        </div>
-                        <div class="input-box">
-                            <span>Endereço :</span>
-                            <input type="text" placeholder="Rua, Bairro">
-                        </div>
-                        <div class="input-box">
-                            <span>Cidade :</span>
-                            <input type="text" placeholder="São Paulo">
-                        </div>
+        <div class="container"> <!-- Início do contêiner principal -->
+            <form action=""> <!-- Formulário começando sem ação definida -->
+                <div class="row"> <!-- Início da linha dentro do formulário -->
+                    <div class="column"> <!-- Início da coluna dentro da linha -->
+                        <h3 class="title">Informações Pessoais</h3> <!-- Título da seção de informações pessoais -->
+                        <div class="input-box"> <!-- Início de uma caixa de entrada -->
+                            <span>Nome Completo :</span> <!-- Rótulo para o campo de nome completo -->
+                            <input type="text" placeholder="João da Silva"> <!-- Campo de entrada para o nome completo -->
+                        </div> <!-- Fim da caixa de entrada -->
+                        <div class="input-box"> <!-- Início de outra caixa de entrada -->
+                            <span>E-mail:</span> <!-- Rótulo para o campo de e-mail -->
+                            <input type="text" placeholder="Exemplo@email.com"> <!-- Campo de entrada para o e-mail -->
+                        </div> <!-- Fim da caixa de entrada -->
+                        <div class="input-box">  <!-- Nova caixa de entrada -->
+                            <span>Endereço :</span> <!-- Rótulo para o campo de endereço -->
+                            <input type="text" placeholder="Rua, Bairro"> <!-- Campo de entrada para o endereço -->
+                        </div> <!-- Fim da caixa de entrada -->
+                        <div class="input-box"> <!-- Nova caixa de entrada --> 
+                            <span>Cidade :</span> <!-- Rótulo para o campo de cidade -->
+                            <input type="text" placeholder="São Paulo"> <!-- Campo de entrada para a cidade -->
+                        </div> <!-- Fim da caixa de entrada -->
 
+                        <div class="flex"> <!-- Início de um contêiner flexível -->
+                            <div class="input-box"> <!-- Nova caixa de entrada -->
+                                <span>País :</span> <!-- Rótulo para o campo de país -->
+                                <input type="text" placeholder="Brasil"> <!-- Campo de entrada para o país -->
+                            </div> <!-- Fim da caixa de entrada -->
+                            <div class="input-box"> <!-- Nova caixa de entrada -->
+                                <span>CEP :</span> <!-- Rótulo para o campo de CEP -->
+                                <input type="text" placeholder="00000-000"> <!-- Campo de entrada para o CEP -->
+                            </div> <!-- Fim da caixa de entrada -->
+
+                        </div> <!-- Fim da caixa de entrada -->
+                    </div> <!-- Fim da caixa de entrada -->
+
+                    <div class="column"> <!-- Início de uma nova coluna -->
+                        <h3 class="title">Pagamento</h3> <!-- Título da seção de pagamento -->
+                        <div class="input-box"> <!-- Início de uma caixa de entrada -->
+                            <span>Cartões aceitos :</span> <!-- Rótulo para os cartões aceitos -->
+                            <img src="imagemdocartao.png" alt=""> <!-- Imagem dos cartões aceitos -->
+                        </div> <!-- Fim da caixa de entrada -->
+                        <div class="input-box"> <!-- Nova caixa de entrada -->
+                            <span>Nome do Titular :</span> <!-- Rótulo para o campo de nome do titular -->
+                            <input type="text" placeholder="João da Silva"> <!-- Campo de entrada para o nome do titular -->
+                        </div> <!-- Fim da caixa de entrada -->
+                        <div class="input-box"> <!-- Nova caixa de entrada -->
+                            <span>Número do Cartão :</span> <!-- Rótulo para o campo de número do cartão -->
+                            <input type="text" placeholder="0000 0000 0000 0000"> <!-- Campo de entrada para o número do cartão -->
+                        </div> <!-- Fim da caixa de entrada -->
+                        <div class="input-box"> <!-- Nova caixa de entrada -->
+                            <span>Mês do vencimento :</span> <!-- Rótulo para o campo de mês de vencimento -->
+                            <input type="text" placeholder="Rua, Bairro"> <!-- Campo de texto para rua e bairro -->
+                        </div>
                         <div class="flex">
                             <div class="input-box">
-                                <span>País :</span>
-                                <input type="text" placeholder="Brasil">
+                                <span>Ano  :</span> <!-- Rótulo para o campo de entrada "Ano" -->
+                                <input type="text" placeholder="Brasil"> <!-- Campo de texto para "Ano" -->
                             </div>
                             <div class="input-box">
-                                <span>CEP :</span>
-                                <input type="text" placeholder="00000-000">
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="column">
-                        <h3 class="title">Pagamento</h3>
-                        <div class="input-box">
-                            <span>Cartões aceitos :</span>
-                            <img src="imagemdocartao.png" alt="">
-                        </div>
-                        <div class="input-box">
-                            <span>Nome do Titular :</span>
-                            <input type="text" placeholder="João da Silva">
-                        </div>
-                        <div class="input-box">
-                            <span>Número do Cartão :</span>
-                            <input type="text" placeholder="0000 0000 0000 0000">
-                        </div>
-                        <div class="input-box">
-                            <span>Mês do vencimento :</span>
-                            <input type="text" placeholder="00">
-                        </div>
-                        <div class="flex">
-                            <div class="input-box">
-                                <span>Ano :</span>
-                                <input type="text" placeholder="00">
-                            </div>
-                            <div class="input-box">
-                                <span>CVV :</span>
-                                <input type="text" placeholder="000">
+                                <span>CVV :</span> <!-- Rótulo para o campo de entrada "CVV" -->
+                                <input type="text" placeholder="00000-000"> <!-- Campo de texto para "CVV" -->
                             </div>
                 
                         </div>
                     </div>  
                  </div>
-                <button type="finalizar-compra" class="btn-finalizar">Finalizar Compra</button>
-            </form>
+                <button type="submit" class="btn">Finalizar Compra</button>  <!-- Botão de envio do formulário -->
+            </form> <!-- Fim do formulário -->
         </div>
          
         
       <!-- Footer Section -->
-        <footer class="text-center py-5">
+        <footer class="text-center py-5"> <!-- Rodapé centrado com preenchimento de 5 unidades -->
 
-            <p class="mb-1">TROCAS E DEVOLUÇÕES</p>
-            <div class="social-icons mb-3">
-                <a href="#"><img src="assets/img/icon/whats.png" width="30" alt="WhatsApp"></a>
-                <a href="#"><img src="assets/img/icon/mail.png" width="30" alt="Email"></a>
-                <a href="#"><img src="assets/img/icon/instagram.png" width="30" alt="Instagram"></a>
+            <p class="mb-1">TROCAS E DEVOLUÇÕES</p> <!-- Parágrafo com texto "TROCAS E DEVOLUÇÕES" -->
+            <div class="social-icons mb-3"> <!-- Div para ícones sociais com margem inferior de 3 unidades -->
+                <a href="#"><img src="assets/img/icon/whats.png" width="30" alt="WhatsApp"></a> <!-- Link para WhatsApp com ícone -->
+                <a href="#"><img src="assets/img/icon/mail.png" width="30" alt="Email"></a> <!-- Link para Email com ícone -->
+                <a href="#"><img src="assets/img/icon/instagram.png" width="30" alt="Instagram"></a> <!-- Link para Instagram com ícone -->
             </div>
-            <p>Todos os direitos reservados à NoBug.</p>
-        </footer>
+            <p>Todos os direitos reservados à NoBug.</p> <!-- Parágrafo de direitos autorais -->
+        </footer> <!-- Fim do rodapé -->
         
         
-    
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-        <script src="assets/js/adicionarProdutoCarrinho.js"></script>
-    </body>
-    </html>
+        <!-- Scripts externos -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script> <!-- Script jQuery Slim -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script> <!-- Script Popper.js -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> <!-- Script Bootstrap 4 -->
+        <script src="assets/js/adicionarProdutoCarrinho.js"></script> <!-- Script local para adicionar produto ao carrinho -->
+    </body> <!-- Fim do corpo -->
+    </html> <!-- Fim do documento HTML -->
     
