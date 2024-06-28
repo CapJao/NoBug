@@ -1,133 +1,165 @@
-    <!-- Essa é uma página de exemplo, ela contém cabeçalho e rodapé apenas -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoBug - Produto</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Notification Banner -->
+    <div id="notificationBanner" class="notification-banner">
+        <span id="notificationMessage" class="text-success"></span>
+        <button type="button" class="close" aria-label="Close" id="closeNotification">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
 
-    <!DOCTYPE html> <!-- Declaração do tipo de documento como HTML5 -->
-    <html lang="en"> <!-- Início do documento HTML com o idioma definido como inglês -->
-    <head> <!-- Início da seção head, onde ficam metadados e links para recursos externos -->
-        <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a viewport para que a página seja responsiva em dispositivos móveis -->
-        <title>NoBug - Produto</title> <!-- Define o título da página que aparece na aba do navegador -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> <!-- Link para o CSS do Bootstrap para estilização e layout responsivo -->
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"> <!-- Link para importar a fonte Poppins do Google Fonts -->
-        <link rel="stylesheet" href="styles.css"> <!-- Link para um arquivo CSS personalizado chamado styles.css -->
-    </head> <!-- Cabeçalho do documento -->
-    <body> <!-- Corpo do documento HTML -->
-        <!-- Notification Banner -->
-        <div id="notificationBanner" class="notification-banner"> <!-- Div para o banner de notificação, com um id e uma classe para estilização -->
-            <span id="notificationMessage" class="text-success"></span> <!-- Span para exibir a mensagem de notificação, com um id e uma classe para texto de sucesso -->
-            <button type="button" class="close" aria-label="Close" id="closeNotification"> <!-- Botão para fechar a notificação, com um id e atributos para acessibilidade -->
-                <span aria-hidden="true">&times;</span> <!-- Span que contém o símbolo "×", oculto para leitores de tela -->
-            </button>
-        </div>
-    
-        <!-- Header Section -->
-        <header class="container-fluid p-3 border-bottom"> <!-- Cabeçalho com classes Bootstrap para estilo, espaçamento e borda inferior -->
-            <div class="d-flex justify-content-between align-items-center"> <!-- Div com layout flexível para distribuir o conteúdo entre os elementos -->
-                <div class="d-flex"> <!-- Div com layout flexível para os links de navegação -->
-                    <a href="#" class="mr-3">Home</a> <!-- Link para a página inicial com margem à direita -->
-                    <a href="#">My Account</a> <!-- Link para a página "My Account" -->
-                </div>
-                <div class="text-center"> <!-- Div para centralizar o conteúdo -->
-                    <img src="assets/img/logo/logo.png" alt="NoBug Logo" class="img-fluid logo"> <!-- Imagem do logo da empresa com classes para responsividade e estilo -->
-                </div>
-                <div class="d-flex justify-content-end align-items-center"> <!-- Div com layout flexível para alinhar o conteúdo à direita -->
-                    <a href="#" id="cart-icon" data-toggle="modal" data-target="#cartModal"> <!-- Link para abrir o modal do carrinho, com id e atributos data para funcionalidade do Bootstrap -->
-                        <img src="assets/img/icon/carrinho.png" width="35" alt="Cart" class="img-fluid"> <!-- Imagem do ícone do carrinho com largura definida e classes para responsividade -->
-                    </a>
-                </div>
+    <!-- Header Section -->
+    <header class="container-fluid p-3 border-bottom">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex">
+                <a href="#" class="mr-3">Home</a>
+                <a href="#">My Account</a>
             </div>
-        </header> <!-- Fim do cabeçalho -->
-    
-        <!-- Cart Modal -->
-        <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true"> <!-- Div principal do modal do carrinho, com classes e atributos para o funcionamento do Bootstrap -->
-            <div class="modal-dialog" role="document"> <!-- Div para o diálogo do modal, configurando o papel do modal como um documento -->
-                <div class="modal-content"> <!-- Div para o conteúdo do modal -->
-                    <div class="modal-header"> <!-- Cabeçalho do modal -->
-                        <h5 class="modal-title" id="cartModalLabel">Carrinho de Compras</h5> <!-- Título do modal com id para referência -->
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <!-- Botão para fechar o modal, com atributos para funcionalidade e acessibilidade -->
-                            <span aria-hidden="true">&times;</span> <!-- Span com símbolo "×", oculto para leitores de tela -->
-                        </button> 
-                    </div>
-                    <div class="modal-body"> <!-- Corpo do modal -->
-                        <p>Seu carrinho está vazio.</p> <!-- Mensagem indicando que o carrinho está vazio -->
-                    </div>
-                    <div class="modal-footer"> <!-- Rodapé do modal -->
-                        <button type="button" class="btn btn-claro">Limpar Carrinho</button> <!-- Botão para limpar o carrinho -->
-                        <button type="button" class="btn btn-comprar">Finalizar Compra</button> <!-- Botão para finalizar a compra -->
-                    </div>
-                </div>
+            <div class="text-center">
+                <img src="assets/img/logo/logo.png" alt="NoBug Logo" class="img-fluid logo">
+            </div>
+            <div class="d-flex justify-content-end align-items-center">
+                <a href="#" id="cart-icon" data-toggle="modal" data-target="#cartModal">
+                    <img src="assets/img/icon/carrinho.png" width="35" alt="Cart" class="img-fluid">
+                </a>
             </div>
         </div>
-    
-         <!-- Size Selection Modal -->
-         <div class="modal fade" id="sizeModal" tabindex="-1" role="dialog" aria-labelledby="sizeModalLabel" aria-hidden="true"> <!-- Div principal do modal de seleção de tamanho, com classes e atributos para o funcionamento do Bootstrap -->
-            <div class="modal-dialog" role="document"> <!-- Div para o diálogo do modal, configurando o papel do modal como um documento -->
-                <div class="modal-content"> <!-- Div para o conteúdo do modal -->
-                    <div class="modal-header"> <!-- Cabeçalho do modal -->
-                        <h5 class="modal-title" id="sizeModalLabel">Selecione o Tamanho</h5> <!-- Título do modal com id para referência -->
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <!-- Botão para fechar o modal, com atributos para funcionalidade e acessibilidade -->
-                            <span aria-hidden="true">&times;</span> <!-- Span com símbolo "×", oculto para leitores de tela -->
-                        </button> 
-                    </div>
-                    <div class="modal-body"> <!-- Corpo do modal -->
-                        <form id="sizeForm"> <!-- Formulário para seleção de tamanho, com id para referência -->
-                            <div class="form-group"> <!-- Grupo de formulário -->
-                                <label for="sizeSelect">Tamanho</label> <!-- Rótulo para o campo de seleção de tamanho -->
-                                <select class="form-control" id="sizeSelect"> <!-- Campo de seleção com classe para estilização e id para referência -->
-                                    <option value="P">P</option> <!-- Opção de tamanho P -->
-                                    <option value="M">M</option> <!-- Opção de tamanho M -->
-                                    <option value="G">G</option> <!-- Opção de tamanho G -->
-                                    <option value="GG">GG</option> <!-- Opção de tamanho GG -->
-                                </select>
-                            </div>
-                            <input type="hidden" id="productName"> <!-- Campo oculto para armazenar o nome do produto -->
-                            <input type="hidden" id="productPrice"> <!-- Campo oculto para armazenar o preço do produto -->
-                        </form>
-                    </div>
-                    <div class="modal-footer"> <!-- Rodapé do modal -->
-                        <button type="button" class="btn btn-claro">Cancelar</button> <!-- Botão para cancelar a ação -->
-                        <button type="button" class="btn btn-comprar">Adicionar ao Carrinho</button> <!-- Botão para adicionar o item ao carrinho -->
-                    </div>
-                </div>
-            </div>
-        </div>
+    </header>
 
-        <div class="caminho"> <!-- Div para o caminho de navegação -->
-            <p>Ínicio</p> <!-- Texto indicando o início do caminho -->
-            <p>></p> <!-- Seta para indicar a navegação -->
-            <p>Minha Conta</p> <!-- Texto indicando a seção "Minha Conta" -->
-            <p>></p> <!-- Seta para indicar a navegação -->
-            <p>Login</p> <!-- Texto indicando a seção "Login" -->
-        </div>
-        <div class="contain"> <!-- Div principal para o formulário de login -->
-            <div>
-            <form> <!-- Formulário de login -->
-                <h2>Login</h2> <!-- Título do formulário -->
-                <input type="email" placeholder="E-mail"> <!-- Campo de entrada para e-mail com placeholder -->
-                <input type="password" placeholder="Senha"> <!-- Campo de entrada para senha com placeholder -->
-                <p class="esqueceu-senha">Esqueceu a senha?</p> <!-- Link para recuperação de senha -->
-                <button class="login-button">LOGIN</button> <!-- Botão de login -->
-            </div>
-        </div>
-                <div class="iniciar-sessao"><p>Não possui uma conta ainda?</p> <!-- Div para a seção de criar uma nova conta --> <!-- Texto indicando a opção de criar uma conta -->
-                    <a href="cadastro.html">Cadastre-se</a> <!-- Link para a página de cadastro -->
+    <!-- Cart Modal -->
+    <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cartModalLabel">Carrinho de Compras</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-            </form> 
-        
-        <!-- Footer Section -->
-        <footer class="text-center py-5"> <!-- Início do rodapé com classes para centralizar o texto e adicionar espaçamento vertical -->
-            <p class="mb-1">TROCAS E DEVOLUÇÕES</p> <!-- Parágrafo com texto sobre trocas e devoluções, com margem inferior pequena -->
-            <div class="social-icons mb-3"> <!-- Div para ícones de redes sociais, com margem inferior -->
-                <a href="#"><img src="assets/img/icon/whats.png" width="30" alt="WhatsApp"></a> <!-- Link para WhatsApp com ícone, largura definida e texto alternativo -->
-                <a href="#"><img src="assets/img/icon/mail.png" width="30" alt="Email"></a> <!-- Link para Email com ícone, largura definida e texto alternativo -->
-                <a href="#"><img src="assets/img/icon/instagram.png" width="30" alt="Instagram"></a> <!-- Link para Instagram com ícone, largura definida e texto alternativo -->
+                <div class="modal-body">
+                    <p>Seu carrinho está vazio.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-claro">Limpar Carrinho</button>
+                    <button type="button" class="btn btn-comprar">Finalizar Compra</button>
+                </div>
             </div>
-            <p>Todos os direitos reservados à NoBug.</p> <!-- Parágrafo com texto indicando que todos os direitos estão reservados à NoBug -->
-        </footer>
-    
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script> <!-- Importa o jQuery, uma biblioteca JavaScript popular, versão slim (menor) -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script> <!-- Importa o Popper.js, uma biblioteca usada para gerenciamento de poppers (elementos de sobreposição) -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> <!-- Importa o JavaScript do Bootstrap para funcionalidade adicional do Bootstrap -->
-        <script src="assets/js/adicionarProdutoCarrinho.js"></script> <!-- Importa um arquivo JavaScript personalizado chamado adicionarProdutoCarrinho.js -->
-    </body> <!-- Fim do corpo do documento -->
-    </html> <!-- Fim do documento HTML -->
-    
+        </div>
+    </div>
+
+    <!-- Size Selection Modal -->
+    <div class="modal fade" id="sizeModal" tabindex="-1" role="dialog" aria-labelledby="sizeModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="sizeModalLabel">Selecione o Tamanho</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="sizeForm">
+                        <div class="form-group">
+                            <label for="sizeSelect">Tamanho</label>
+                            <select class="form-control" id="sizeSelect">
+                                <option value="P">P</option>
+                                <option value="M">M</option>
+                                <option value="G">G</option>
+                                <option value="GG">GG</option>
+                            </select>
+                        </div>
+                        <input type="hidden" id="productName">
+                        <input type="hidden" id="productPrice">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-claro">Cancelar</button>
+                    <button type="button" class="btn btn-comprar">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Caminho de Navegação -->
+    <div class="caminho">
+        <p>Ínicio</p>
+        <p>></p>
+        <p>Minha Conta</p>
+        <p>></p>
+        <p>Login</p>
+    </div>
+
+    <!-- Formulário de Login -->
+    <div class="contain">
+        <div>
+            <form>
+                <h2>Login</h2>
+                <input type="email" placeholder="E-mail">
+                <input type="password" placeholder="Senha">
+                <p class="esqueceu-senha" id="forgotPassword">Esqueceu a senha?</p>
+                <button class="login-button">LOGIN</button>
+            </form>
+            <div class="iniciar-sessao">
+                <p>Não possui uma conta ainda?</p>
+                <a href="cadastro.html">Cadastre-se</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup Modal Esqueci a Senha -->
+    <div class="modal fade" id="forgotPasswordModal" tabindex="-1" role="dialog" aria-labelledby="forgotPasswordModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="forgotPasswordModalLabel">Recuperar Senha</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="forgotPasswordEmail">E-mail</label>
+                            <input type="email" class="form-control" id="forgotPasswordEmail" placeholder="Informe seu e-mail">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-claro" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-comprar">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="text-center py-5">
+        <p class="mb-1">TROCAS E DEVOLUÇÕES</p>
+        <div class="social-icons mb-3">
+            <a href="#"><img src="assets/img/icon/whats.png" width="30" alt="WhatsApp"></a>
+            <a href="#"><img src="assets/img/icon/mail.png" width="30" alt="Email"></a>
+            <a href="#"><img src="assets/img/icon/instagram.png" width="30" alt="Instagram"></a>
+        </div>
+        <p>Todos os direitos reservados à NoBug.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="assets/js/adicionarProdutoCarrinho.js"></script>
+    <script>
+        document.getElementById('forgotPassword').addEventListener('click', function() {
+            $('#forgotPasswordModal').modal('show');
+        });
+    </script>
+</body>
+</html>

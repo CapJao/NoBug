@@ -1,199 +1,197 @@
 /* General Styles */
 body {
-    font-family: 'Poppins', sans-serif; /* Define a fonte principal como Poppins e fallback para sans-serif */
-    background-color: #f8f9fa;  /* Define a cor de fundo do corpo como cinza claro (#f8f9fa) */
-    overflow-x: hidden; /* Esconde a barra de rolagem horizontal se houver conteúdo extra */
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    overflow-x: hidden;
 }
-
+ 
 /* Tipografia Geral */
 body {
-    font-family: 'Arial', sans-serif;  /* Altera a fonte para Arial e fallback para sans-serif */
-    color: #000000;  /* Define a cor do texto como preto (#000000) */
-    line-height: 1.6; /* Define a altura da linha do texto */
-    margin: 0; /* Remove as margens padrão do corpo */
-    padding: 0; /* Remove o preenchimento padrão do corpo */
-    background-color: #f8f8f8; /* Define a cor de fundo do corpo como cinza mais claro (#f8f8f8) */
-} 
-
+    font-family: 'Arial', sans-serif;
+    color: #000000;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+ 
 /* Cabeçalhos */
 h1, h2, h3, h4 {
-    margin-bottom: 0.5em; /* Define a margem inferior comum para os cabeçalhos */
-    font-weight: 700; /* Define a espessura da fonte como bold (700) para todos os cabeçalhos */
+    margin-bottom: 0.5em;
+    font-weight: 700;
 }
-
+ 
 h1 {
-    font-size: 2.5em; /* Define o tamanho da fonte do h1 como 2.5 vezes o tamanho padrão */
-    color: #000000; /* Define a cor do texto do h1 como preto (#000000) */
-    text-align: center; /* Centraliza o texto do h1 */
-    margin-top: 0.5em; /* Define uma margem superior para o h1 */
+    font-size: 2.5em;
+    color: #000000;
+    text-align: center;
+    margin-top: 0.5em;
 }
-
+ 
 h2 {
-    font-size: 2em; /* Define o tamanho da fonte do h2 como 2 vezes o tamanho padrão */
-    color: #000000; /* Define a cor do texto do h2 como preto (#000000) */
+    font-size: 2em;
+    color: #000000;
 }
-
+ 
 h3 {
-    font-size: 1.75em; /* Define o tamanho da fonte do h3 como 1.75 vezes o tamanho padrão */
-    color: #000000; /* Define a cor do texto do h3 como preto (#000000) */
+    font-size: 1.75em;
+    color: #000000;
 }
-
+ 
 h4 {
-    font-size: 1.5em; /* Define o tamanho da fonte do h4 como 1.5 vezes o tamanho padrão */
-    color: #000000; /* Define a cor do texto do h4 como preto (#000000) */
+    font-size: 1.5em;
+    color: #000000;
 }
-
+ 
 /* Parágrafos */
 p {
-    margin-bottom: 1.2em;   /* Define a margem inferior para os parágrafos */
-    font-size: 1.1em; /* Define o tamanho da fonte para os parágrafos */
-    color: #000000; /* Define a cor do texto dos parágrafos como preto (#000000) */
+    margin-bottom: 1.2em;
+    font-size: 1.1em;
+    color: #000000;
 }
-
+ 
 /* Listas */
 ul {
-    margin-bottom: 1.2em; /* Define a margem inferior para listas não ordenadas */
-    padding-left: 1.5em; /* Define o recuo à esquerda para listas não ordenadas */
+    margin-bottom: 1.2em;
+    padding-left: 1.5em;
 }
-
+ 
 ul li {
-    margin-bottom: 0.5em; /* Define a margem inferior para os itens da lista */
-    font-size: 1.1em; /* Define o tamanho da fonte para os itens da lista */
-    color: #000000; /* Define a cor do texto dos itens da lista como preto (#000000) */
+    margin-bottom: 0.5em;
+    font-size: 1.1em;
+    color: #000000;
 }
-
+ 
 /* Links */
 a {
-    color: #383838; /* Define a cor padrão dos links como cinza escuro (#383838) */
-    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    color: #383838;
+    text-decoration: none;
 }
-
+ 
 a:hover {
-    color:#000;   /* Define a cor dos links quando o mouse passa por cima como preto (#000) */
-    text-decoration: underline; /* Adiciona sublinhado aos links quando o mouse passa por cima */
+    color:#000;
+    text-decoration: underline;
 }
 /* Header Styles */
 header {
-    background-color: #ffffff; /* Define a cor de fundo do cabeçalho como branco (#ffffff) */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil ao cabeçalho */
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
+ 
 header .logo {
-    max-width: 100%; /* Garante que o logotipo do cabeçalho não ultrapasse a largura máxima */
-    height: auto; /* Mantém a proporção do logotipo ajustando automaticamente a altura */
+    max-width: 100%;
+    height: auto;
 }
-
-header a { /* Estilos para links dentro do cabeçalho */
-    text-decoration: none; /* Remove o sublinhado padrão dos links dentro do cabeçalho */
-    color: #333; /* Define a cor dos links como cinza escuro (#333) */
-    font-weight: 500; /* Define o peso da fonte como 500 (mais ou menos bold) */
-    font-style: italic;  /* Define o estilo da fonte como itálico */
-    font-family: 'Poppins', sans-serif; /* Define a fonte dos links como Poppins com fallback para sans-serif */
+ 
+header a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-style: italic;
+    font-family: 'Poppins', sans-serif;
 }
-
-/* Classes de layout flexível para o cabeçalho */
+ 
 header .d-flex {
-    display: flex;  /* Transforma o elemento em um flex container */
-    align-items: center; /* Centarliza verticalmente os itens dentro do flex container*/
+    display: flex;
+    align-items: center;
 }
-
+ 
 header .justify-content-between {
-    justify-content: space-between;  /* Distribui os itens com espaço igual entre eles */
+    justify-content: space-between;
 }
-
+ 
 header .justify-content-end {
-    justify-content: flex-end; /* Alinha os itens à direita dentro do espaço disponível */
+    justify-content: flex-end;
 }
-
+ 
 header .align-items-center {
-    align-items: center; /* Centraliza verticalmente os itens */
+    align-items: center;
 }
-
-/* Estilos para o botão de toggler da navbar */
+ 
 header .navbar-toggler {
-    border: none; /* Remove a borda do botão */
-    background: none; /* Remove o fundo do botão */
+    border: none;
+    background: none;
 }
-
+ 
 header .navbar-toggler-icon {
-    width: 25px; /* Define a largura do ícone */
-    height: 25px; /* Define a altura do ícone */
-    background-image: url("assets/img/icon/menu.png");  /* Define a imagem de fundo como o ícone do menu */
-    background-size: cover;  /* Garante que a imagem de fundo cubra todo o espaço do elemento */
+    width: 25px;
+    height: 25px;
+    background-image: url("assets/img/icon/menu.png"); /* Certifique-se de que o ícone do menu esteja no caminho correto */
+    background-size: cover;
 }
-
+ 
 /* Mobile Header Styles */
 @media (max-width: 767px) {
     header .text-center {
-        flex-grow: 1; /* Permite que o elemento cresça para ocupar o espaço disponível */
-        text-align: center; /* Centraliza o texto */
+        flex-grow: 1;
+        text-align: center;
     }
-
+ 
     header .navbar-toggler {
-        display: block; /* Exibe o botão de toggler da navbar */
-        color: #000; /* Define a cor do ícone do toggler como preto (#000000) */
+        display: block;
+        color: #000;
     }
-
+ 
     header .d-none {
-        display: none !important; /* Esconde o elemento especificado (d-none) mesmo se !important for necessário */
+        display: none !important;
     }
 }
-
+ 
 /* Desktop Header Styles */
 @media (min-width: 768px) {
     header .navbar-toggler {
         display: none;
     }
 }
-
+ 
 /* Popup Menu Styles */
 .popup-menu {
-    position: fixed;  /* Define a posição fixa em relação à viewport */
-    top: 0; /* Coloca o menu no topo da viewport */
-    left: -100%; /* Inicialmente posiciona o menu completamente à esquerda (fora da tela) */
-    width: 90%; /* Define a largura do menu como 90% da largura da viewport */
-    height: 100%; /* Define a altura do menu como 100% da altura da viewport */
-    background-color: #fff; /* Define a cor de fundo do menu como branco (#ffffff) */
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave ao lado direito do menu */
-    z-index: 1050; /* Define a ordem de empilhamento para garantir que o menu esteja acima de outros elementos */
-    transition: left 0.3s ease; /* Adiciona uma transição suave ao movimento lateral do menu */
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 90%;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1050;
+    transition: left 0.3s ease;
 }
-
+ 
 .popup-menu.open {
-    left: 0;  /* Quando a classe 'open' é aplicada, move o menu para a posição 0 (visível) */
+    left: 0;
 }
-
+ 
 .popup-menu .close-btn {
-    position: absolute; /* Define a posição absoluta para o botão de fechar */
-    top: 10px; /* Coloca o botão 10px do topo */
-    right: 10px; /* Coloca o botão 10px da direita */
-    background: none; /* Remove o fundo do botão */
-    border: none; /* Remove a borda do botão */
-    cursor: pointer; /* Define o cursor como apontador ao passar sobre o botão */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
-
+ 
 .popup-menu .close-btn img {
-    width: 35px;  /* Define a largura da imagem dentro do botão de fechar como 35px */
-    height: 35px; /* Define a altura da imagem dentro do botão de fechar como 35px */
+    width: 35px; /* Ajuste o tamanho conforme necessário */
+    height: 35px;
 }
-/* Estilos para a imagem dentro do botão de fechar do menu pop-up */
+ 
 .popup-menu .popup-content {
-    margin-top: 50px; /* Define a margem superior do conteúdo dentro do menu pop-up */
-    padding: 20px; /* Define o preenchimento interno do conteúdo dentro do menu pop-up */
-    display: flex; /* Transforma o conteúdo em um flex container */
-    flex-direction: column; /* Define a direção dos itens como coluna */
+    margin-top: 50px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
 }
-/* Estilos para links dentro do conteúdo do menu pop-up */
+ 
 .popup-menu .popup-content a {
-    text-decoration: none; /* Remove o sublinhado padrão dos links */
-    color: #333; /* Define a cor do texto dos links como cinza escuro (#333) */
-    font-size: 22px; /* Define o tamanho da fonte dos links como 22px */
-    font-weight: 400; /* Define o peso da fonte como 400 */
-    font-style: italic; /* Define o estilo da fonte como itálico */
-    font-family: 'Poppins', sans-serif; /* Define a fonte dos links como Poppins com fallback para sans-serif */
-    margin-bottom: 15px; /* Define a margem inferior para os links */
+    text-decoration: none;
+    color: #333;
+    font-size: 22px;
+    font-weight: 400;
+    font-style: italic;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 15px;
 }
-
+ 
 /* Botão Comprar (Escuro) Styles */
 .btn-comprar {
     background-color: #808080; /* Cor do fundo */
@@ -206,11 +204,11 @@ header .navbar-toggler-icon {
     cursor: pointer; /* Cursor de ponteiro */
     transition: background-color 0.3s ease; /* Transição suave */
 }
-
+ 
 .btn-comprar:hover {
     background-color: #666666; /* Cor de fundo ao passar o mouse */
 }
-
+ 
 /* Botão Claro Styles */
 .btn-claro {
     background-color: #f5f5f5; /* Cor do fundo */
@@ -223,11 +221,11 @@ header .navbar-toggler-icon {
     cursor: pointer; /* Cursor de ponteiro */
     transition: background-color 0.3s ease; /* Transição suave */
 }
-
+ 
 .btn-claro:hover {
     background-color: #e4e4e4; /* Cor de fundo ao passar o mouse */
 }
-
+ 
 /* Botão Calcular Styles */
 .btn-calcular {
     background-color: #808080; /* Cor do fundo */
@@ -240,24 +238,24 @@ header .navbar-toggler-icon {
     cursor: pointer; /* Cursor de ponteiro */
     transition: background-color 0.3s ease; /* Transição suave */
 }
-
+ 
 .btn-calcular:hover {
     background-color: #666666; /* Cor de fundo ao passar o mouse */
 }
-
+ 
 /* Product Section Styles */
 .product-box {
-    background-color: #f1f1f1;  /* Define a cor de fundo da caixa de produto como cinza claro (#f1f1f1) */
-    padding: 20px; /* Define o preenchimento interno da caixa de produto como 20px */
-    margin-bottom: 20px; /* Define a margem inferior da caixa de produto como 20px */
-    border-radius: 10px; /* Define o raio da borda da caixa de produto como 10px para bordas arredondadas */
-    transition: transform 0.3s ease; /* Adiciona uma transição suave no efeito de transformação */
+    background-color: #f1f1f1;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
 }
-/* Efeito de escala ao passar o mouse sobre a caixa de produto */
+ 
 .product-box:hover {
-    transform: scale(1.05); /* Aumenta o tamanho da caixa de produto em 5% ao passar o mouse sobre ela */
+    transform: scale(1.05);
 }
-
+ 
 .product-image {
     max-width: 100%; /* Ajuste de largura máxima */
     max-height: 400px; /* Ajuste de altura máxima */
@@ -265,172 +263,409 @@ header .navbar-toggler-icon {
     margin: auto; /* Centralização */
     transition: transform 0.3s ease;
 }
-
+ 
 /* Quantity Box Styles */
 .quantity-box {
     width: 100%;
     max-width: 200px; /* Ajuste de largura máxima */
 }
-
+ 
 .quantity-btn {
     width: 50px; /* Ajuste de largura */
     height: 50px; /* Ajuste de altura */
     border-radius: 25px; /* Bordas arredondadas */
 }
-
-/* Estilos para o rodapé */
+ 
+/* Footer Styles */
 footer {
-    background-color: #ffffff;  /* Define a cor de fundo do rodapé como branco (#ffffff) */
-    border-top: 1px solid #e5e5e5; /* Adiciona uma borda superior de 1px sólida com cor cinza claro (#e5e5e5) */
+   
+    border-top: 1px solid #e5e5e5;
 }
-/* Estilos para parágrafos dentro do rodapé */
+ 
 footer p {
-    margin: 0; /* Remove as margens padrão dos parágrafos dentro do rodapé */
+    margin: 0;
 }
-/* Estilos para imagens de ícones sociais no rodapé */
+ 
 footer .social-icons img {
-    width: 30px; /* Define a largura das imagens dos ícones sociais como 30px */
-    height: auto; /* Mantém a proporção da altura automaticamente */
-    margin: 0 10px; /* Define a margem entre as imagens dos ícones sociais */
+    width: 30px;
+    height: auto;
+    margin: 0 10px;
 }
-
-/* Estilos para parágrafos dentro do corpo do modal */
+ 
+/* Modal Styles */
 .modal-body p {
-    text-align: center; /* Centraliza o texto dos parágrafos dentro do corpo do modal */
+    text-align: center;
 }
-
-/* Estilos para o banner de notificação */
+ 
+/* Notification Banner Styles */
 .notification-banner {
-    position: fixed;   /* Define a posição fixa para o banner de notificação */
-    top: 0; /* Coloca o banner no topo da viewport */
-    left: 0; /* Coloca o banner à esquerda da viewport */
-    right: 0; /* Coloca o banner à direita da viewport */
-    background-color: #fff; /* Define a cor de fundo do banner como branco (#ffffff) */
-    border-bottom: 1px solid #e5e5e5;  /* Adiciona uma borda inferior de 1px sólida com cor cinza claro (#e5e5e5) */
-    padding: 10px; /* Define o preenchimento interno do banner */
-    display: flex; /* Transforma o banner em um flex container */
-    justify-content: space-between; /* Distribui os itens com espaço igual entre eles */
-    align-items: center; /* Centraliza verticalmente os itens */
-    z-index: 1050; /* Define a ordem de empilhamento para garantir que o banner esteja acima de outros elementos */
-    display: none; /* Inicialmente esconde o banner de notificação */
-} 
-/* Estilos para mostrar o banner de notificação */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1050;
+    display: none;
+}
+ 
 .notification-banner.show {
-    display: flex;  /* Mostra o banner de notificação quando a classe 'show' é aplicada */
+    display: flex;
 }
-/* Estilos para o botão de fechar dentro do banner de notificação */
+ 
 .notification-banner .close {
-    border: none; /* Remove a borda do botão */
-    background: none; /* Remove o fundo do botão */
-    font-size: 20px; /* Define o tamanho da fonte do ícone de fechar como 20px */
-    line-height: 20px; /* Define a altura da linha do ícone de fechar como 20px */
-    cursor: pointer; /* Define o cursor como apontador ao passar sobre o botão */
+    border: none;
+    background: none;
+    font-size: 20px;
+    line-height: 20px;
+    cursor: pointer;
 }
-
+ 
 /* Espaço vazio no final */
 .spacer {
-    height: 100px; /* Define a altura do espaço vazio como 100px */
+    height: 100px;
 }
-
+ 
 /* Breadcrumb Styles */
 .breadcrumb-container {
-    font-size: 1rem;  /* Define o tamanho da fonte do breadcrumb como 1rem */
-    color: #000; /* Define a cor do texto do breadcrumb como preto (#000) */
+    font-size: 1rem;
+    color: #000;
 }
-
-/* Estilos para a caixa de verificação de e-mail */
+ 
+/* Email Verification Box Styles */
 .email-verification-box {
-    background-color: #f1f1f1;  /* Define a cor de fundo da caixa de verificação de e-mail como cinza claro (#f1f1f1) */
-    border-radius: 10px; /* Define o raio da borda da caixa como 10px para bordas arredondadas */
-    text-align: center; /* Centraliza o texto dentro da caixa */
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    text-align: center;
 }
-
+ 
 .email-verification-box .email-icon {
-    width: 50px; /* Define a largura do ícone de e-mail como 50px */
-    height: auto; /* Mantém a proporção da altura automaticamente */
+    width: 50px;
+    height: auto;
 }
-
-/* Estilos para a página de compras */
-.container {
-    display: flex; /* Transforma o elemento em um flex container */
-    justify-content: center; /* Centraliza horizontalmente o conteúdo */
-    margin-top: 80px; /* Define a margem superior como 80px */
-    min-height: 65vh; /* Define a altura mínima como 65% da altura da viewport */
-    background: rgb(255, 255, 255); /* Define a cor de fundo como branco (#ffffff) */
-    padding: 10px; /* Define o preenchimento interno como 10px */
+ 
+/*Página de compras*/
+.con {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    min-height: 65vh;
+    padding: 10px;
 }
-
-.container form{
-    height: 700px; /* Define a altura do formulário como 700px */
-    width: 1000px; /* Define a largura do formulário como 1000px */
-    padding: 40px; /* Define o preenchimento interno do formulário como 40px */
-    background: #ccccccab; /* Define a cor de fundo do formulário com transparência (#ccccccab) */
-    border-radius: 10px; /* Define o raio da borda do formulário como 10px para bordas arredondadas */
+ 
+.con form{
+    height: 700px;
+    width: 1000px;
+    padding: 40px;
+    background: #ccccccab;
+    border-radius: 10px;
 }
-/* Estilos para as linhas dentro do formulário */
+ 
 form .row {
-    display: flex; /* Transforma a linha em um flex container */
-    gap: 15px; /* Define o espaçamento entre os itens da linha como 15px */
-    flex-wrap: wrap; /* Permite que os itens da linha quebrem para a próxima linha se necessário */
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
 }
-/* Estilos para as colunas dentro das linhas do formulário */
+ 
 .row .column{
-    flex: 1 1 250px; /* Faz com que as colunas ocupem o mesmo espaço e tenham largura mínima de 250px */
+    flex: 1 1 250px;
 }
-/* Estilos para o título dentro das colunas do formulário */
+ 
 .column .title{
-    font-size: 20px;  /* Define o tamanho da fonte do título como 20px */
-    color: #000; /* Define a cor do texto do título como preto (#000000) */
-    text-transform: uppercase; /* Transforma o texto do título em maiúsculas */
-    margin-bottom: 5px; /* Define a margem inferior do título como 5px */
+    font-size: 20px;
+    color: #000;
+    text-transform: uppercase;
+    margin-bottom: 5px;
 }
-/* Estilos para a caixa de entrada dentro das colunas */
+ 
 .column .input-box{
-    margin: 15px;  /* Define a margem ao redor da caixa de entrada */
+    margin: 15px;
 }
-/* Estilos para o span dentro da caixa de entrada */
+ 
 .input-box span{
-    display: block; /* Faz com que o span seja exibido como bloco */
-    margin-bottom: 10px; /* Define a margem inferior do span como 10px */
+    display: block;
+    margin-bottom: 10px;
 }
-/* Estilos para o input dentro da caixa de entrada */
+ 
 .input-box input{
-    width: 100%;  /* Define a largura do input como 100% */
-    padding: 10px 15px; /* Define o preenchimento interno do input */
-    border: 0px solid #535353; /* Define a borda do input */
-    border-radius: 6px; /* Define o raio da borda do input como 6px para bordas arredondadas */
-    font-size: 15px; /* Define o tamanho da fonte do input como 15px */
+    width: 100%;
+    padding: 10px 15px;
+    border: 0px solid #000000;
+    border-radius: 6px;
+    font-size: 15px;
 }
-/* Estilos para o flex container dentro das colunas */
+ 
 .column .flex{
-    display: flex; /* Transforma o elemento em um flex container */
-    gap: 15px; /* Define o espaçamento entre os itens do flex container como 15px */
+    display: flex;
+    gap: 15px;
 }
-/* Estilos para a caixa de entrada dentro do flex container */
+ 
 .flex .input-box{
-    margin-top: 15px; /* Define a margem superior da caixa de entrada dentro do flex container como 15px */
+    margin-top: 15px;
 }
-/* Estilos para a imagem dentro da caixa de entrada */
+ 
 .input-box img{
-    height: 34px;  /* Define a altura da imagem dentro da caixa de entrada como 34px */
-    margin-top: 5px; /* Define a margem superior da imagem dentro da caixa de entrada como 5px */
-    filter: drop-shadow(0 0 1px #000); /* Adiciona uma sombra sutil à imagem */
+    height: 34px;
+    margin-top: 5px;
+    filter: drop-shadow(0 0 1px #000);
 }
-/* Estilos para o botão dentro do formulário */
-form .btn{
-    width: 100%; /* Define a largura do botão como 100% */
-    padding: 12px; /* Define o preenchimento interno do botão como 12px */
-    background: pink; /* Define o fundo do botão como rosa */
-    border: none; /* Remove a borda do botão */
-    outline: none; /* Remove o contorno do botão */
-    border-radius: 6px; /* Define o raio da borda do botão como 6px para bordas arredondadas */
-    font-size: 17px; /* Define o tamanho da fonte do botão como 17px */
-    color: #f5f5f5; /* Define a cor do texto do botão como branco (#f5f5f5) */
-    margin-top: 5px; /* Define a margem superior do botão como 5px */
-    cursor: pointer; /* Define o cursor como apontador ao passar sobre o botão */
+ 
+form .btn-finalizar{
+    width: 100%;
+    padding: 12px;
+    background: #000000;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    font-size: 17px;
+    color: #ffffff;
+    margin-top: 5px;
+    cursor: pointer;
 }
-/* Estilos para o botão ao passar o mouse sobre ele */
-form .btn:hover{
-    background: #000; /* Define o fundo do botão como preto ao passar o mouse sobre ele */
+ 
+form .btn-finalizar:hover{
+    background: #6b6b6b;
 }
-
+ 
+.buttont{/*botão trade*/
+    border: 1px solid #f5f5f5;
+    background-color: #ffffff;
+    border-radius: 0px;
+    padding: 0 5px;
+    cursor: pointer;
+    transition: .4s;
+    line-height: 20%;
+}
+.buttont:hover{
+    border-color: black;
+    color: #000;
+}
+/*pagina cadastro*/
+.cont{
+    background-color:  #ffff;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    font-family: 'sans-serif';
+    h2{
+        margin-top: 50px;
+    }
+}
+.cont button{
+    background-color: #000000;
+    color: #fff;
+    font-size: 15px;
+    padding: 15px 30px;
+    border: 1px solid transparent;
+    border-radius: 25px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    z-index: 3;
+    font-family: 'sans-serif';
+}
+.cont form{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+.iniciar-sessao{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+        p{
+        font-size: 18px;
+        font-family: 'sans-serif';
+        margin: 0;
+    }
+    a{
+        background-color: hsla(0, 0%, 100%, 0.1);
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 18px;
+        text-decoration: none;
+        color: #000;
+        font-family: 'sans-serif';
+    }
+}
+.cont input{
+    background-color: #eee;
+    border: none;
+    color: #000000;
+    margin: 12px 0;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 25px;
+    width: 600px;
+    outline: none;
+    align-items: center;
+    justify-content: center;
+    font-family:'sans-serif'
+}
+.caminho{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 20px;
+    font-family: 'sans-serif';
+    margin-top: 50px;
+}
+.buttont{/*botão trade*/
+    border: 1px solid #f5f5f5;
+    background-color: #ffffff;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: .4s;
+    line-height: 10%;
+}
+.buttont:hover{
+    border-color: black;
+    color: #000;
+}
+.trade{
+    margin-bottom: 1%;
+}
+.trade h3{
+        font-size: 20px;
+        letter-spacing: 1px;
+        text-align: center;
+        font-weight: bold;
+        font-family:'sans-serif';
+}
+/*Pagina Login*/
+.contain{
+    background-color:  #ffff;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    h2{
+        margin-top: 50px;
+        font-family: 'sans-serif';
+    }
+}
+.login-button{
+    background-color: #000000;
+    color: #fff;
+    font-size: 15px;
+    padding: 10px 15px;
+    border: 1px solid transparent;
+    border-radius: 40px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    z-index: 3;
+    font-family: 'sans-serif';
+}
+.contain form{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+.iniciar-sessao{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+        p{
+        font-size: 18px;
+        font-family: 'sans-serif';
+    }
+    a{
+        background-color: hsla(0, 0%, 100%, 0.1);
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 18px;
+        margin-left: 5px;
+        text-decoration: none;
+        color: #000;
+        font-family: 'sans-serif';
+    }
+}
+.contain input{
+    background-color: #eee;
+    border: none;
+    color: #000000;
+    margin: 12px 0;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 25px;
+    width: 600px;
+    outline: none;
+    align-items: center;
+    justify-content: center;
+    font-family:'sans-serif'
+}
+.esqueceu-senha{
+    border: none;
+    background: none;
+    font-family: 'sans-serif';
+    font-size: 16px;
+    margin-top: 0;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+/*Pagina Troca*/
+.container-trade{
+    font-family: 'sans-serif';
+    h1{
+        text-align: center;
+        justify-content: center;
+    }
+    p{
+        font-size: 20px;
+    }
+}
+.text-trade{
+    padding: 0px 125px;
+    h5{
+        font-weight:600;
+        font-size: 22px;
+        letter-spacing: 1px;
+    }
+}
+.text-troca{
+    padding: 0px 125px;
+    h5{
+        font-weight:600;
+        font-size: 22px;
+        letter-spacing: 1px;
+    }
+    h2{
+        text-align: center;
+        font-size: 32px;
+    }
+}
+.texto-troca{
+    padding: 0px 125px;
+    h5{
+        font-weight:600;
+        font-size: 22px;
+        letter-spacing: 1px;
+    }
+    li{
+        font-size: 20px;
+    }
+}
