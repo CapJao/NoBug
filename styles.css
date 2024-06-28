@@ -350,87 +350,86 @@ footer .social-icons img {
  
 /*Página de compras*/
 .con {
-    display: flex;
-    justify-content: center;
-    margin-top: 80px;
-    min-height: 65vh;
-    padding: 10px;
+    display: flex; /* Utiliza flexbox para alinhar o conteúdo */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    margin-top: 80px; /* Adiciona uma margem superior de 80px */
+    min-height: 65vh; /* Define uma altura mínima de 65% da altura da viewport */
+    padding: 10px; /* Adiciona um padding de 10px em todos os lados */
 }
- 
-.con form{
-    height: 700px;
-    width: 1000px;
-    padding: 40px;
-    background: #ccccccab;
-    border-radius: 10px;
+
+.con form {
+    height: 700px; /* Define a altura do formulário como 700px */
+    width: 1000px; /* Define a largura do formulário como 1000px */
+    padding: 40px; /* Adiciona um padding de 40px em todos os lados */
+    background: #ccccccab; /* Define a cor de fundo com uma opacidade */
+    border-radius: 10px; /* Define cantos arredondados de 10px */
 }
- 
+
 form .row {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
+    display: flex; /* Utiliza flexbox para alinhar o conteúdo */
+    gap: 15px; /* Adiciona um espaço de 15px entre os elementos */
+    flex-wrap: wrap; /* Permite que os itens sejam quebrados em várias linhas, se necessário */
 }
- 
-.row .column{
-    flex: 1 1 250px;
+
+.row .column {
+    flex: 1 1 250px; /* Define o comportamento flex dos itens, com uma base de 250px */
 }
- 
-.column .title{
-    font-size: 20px;
-    color: #000;
-    text-transform: uppercase;
-    margin-bottom: 5px;
+
+.column .title {
+    font-size: 20px; /* Define o tamanho da fonte */
+    color: #000; /* Define a cor do texto */
+    text-transform: uppercase; /* Transforma o texto para maiúsculas */
+    margin-bottom: 5px; /* Adiciona uma margem inferior de 5px */
 }
- 
-.column .input-box{
-    margin: 15px;
+
+.column .input-box {
+    margin: 15px; /* Adiciona uma margem de 15px em todos os lados */
 }
- 
-.input-box span{
-    display: block;
-    margin-bottom: 10px;
+
+.input-box span {
+    display: block; /* Define o span como um bloco */
+    margin-bottom: 10px; /* Adiciona uma margem inferior de 10px */
 }
- 
-.input-box input{
-    width: 100%;
-    padding: 10px 15px;
-    border: 0px solid #000000;
-    border-radius: 6px;
-    font-size: 15px;
+
+.input-box input {
+    width: 100%; /* Define a largura do input para 100% do seu contêiner */
+    padding: 10px 15px; /* Adiciona um padding de 10px em cima/embaixo e 15px nas laterais */
+    border: 0px solid #000000; /* Define uma borda, mas com 0px de espessura */
+    border-radius: 6px; /* Define cantos arredondados de 6px */
+    font-size: 15px; /* Define o tamanho da fonte */
 }
- 
-.column .flex{
-    display: flex;
-    gap: 15px;
+
+.column .flex {
+    display: flex; /* Utiliza flexbox para alinhar o conteúdo */
+    gap: 15px; /* Adiciona um espaço de 15px entre os elementos */
 }
- 
-.flex .input-box{
-    margin-top: 15px;
+
+.flex .input-box {
+    margin-top: 15px; /* Adiciona uma margem superior de 15px */
 }
- 
-.input-box img{
-    height: 34px;
-    margin-top: 5px;
-    filter: drop-shadow(0 0 1px #000);
+
+.input-box img {
+    height: 34px; /* Define a altura da imagem */
+    margin-top: 5px; /* Adiciona uma margem superior de 5px */
+    filter: drop-shadow(0 0 1px #000); /* Adiciona uma sombra ao redor da imagem */
 }
- 
-form .btn-finalizar{
-    width: 100%;
-    padding: 12px;
-    background: #000000;
-    border: none;
-    outline: none;
-    border-radius: 6px;
-    font-size: 17px;
-    color: #ffffff;
-    margin-top: 5px;
-    cursor: pointer;
+
+form .btn-finalizar {
+    width: 100%; /* Define a largura do botão para 100% do seu contêiner */
+    padding: 12px; /* Adiciona um padding de 12px em todos os lados */
+    background: #000000; /* Define a cor de fundo do botão como preto */
+    border: none; /* Remove a borda do botão */
+    outline: none; /* Remove o contorno do botão */
+    border-radius: 6px; /* Define cantos arredondados de 6px */
+    font-size: 17px; /* Define o tamanho da fonte */
+    color: #ffffff; /* Define a cor do texto como branco */
+    margin-top: 5px; /* Adiciona uma margem superior de 5px */
+    cursor: pointer; /* Muda o cursor para o ponteiro ao passar sobre o botão */
 }
- 
-form .btn-finalizar:hover{
-    background: #6b6b6b;
+
+form .btn-finalizar:hover {
+    background: #6b6b6b; /* Muda a cor de fundo do botão ao passar o mouse */
 }
- 
 .buttont{/*botão trade*/
     border: 1px solid #f5f5f5;
     background-color: #ffffff;
