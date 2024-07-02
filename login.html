@@ -91,11 +91,7 @@
 
     <!-- Caminho de Navegação -->
     <div class="caminho">
-        <p>Ínicio</p>
-        <p>></p>
-        <p>Minha Conta</p>
-        <p>></p>
-        <p>Login</p>
+        <p>Ínicio > Minha Conta > Login</p>
     </div>
 
     <!-- Formulário de Login -->
@@ -106,7 +102,7 @@
                 <input type="email" placeholder="E-mail">
                 <input type="password" placeholder="Senha">
                 <p class="esqueceu-senha" id="forgotPassword">Esqueceu a senha?</p>
-                <button class="login-button">LOGIN</button>
+                <a href="index.html"><button class="login-button">LOGIN</button></a>
             </form>
             <div class="iniciar-sessao">
                 <p>Não possui uma conta ainda?</p>
@@ -142,15 +138,16 @@
     </div>
 
     <!-- Footer Section -->
-    <footer class="text-center py-5">
-        <p class="mb-1">TROCAS E DEVOLUÇÕES</p>
-        <div class="social-icons mb-3">
-            <a href="#"><img src="assets/img/icon/whats.png" width="30" alt="WhatsApp"></a>
-            <a href="#"><img src="assets/img/icon/mail.png" width="30" alt="Email"></a>
-            <a href="#"><img src="assets/img/icon/instagram.png" width="30" alt="Instagram"></a>
+    <!-- Footer Section -->
+    <footer class="text-center py-5"> <!-- Rodapé da página com padding top e bottom de 5 unidades -->
+        <button class="buttont">TROCAS E DEVOLUÇÕES</button> <!-- Parágrafo com título de trocas e devoluções -->
+        <div class="social-icons mb-3"> <!-- Ícones sociais -->
+            <a href="#"><img src="assets/img/icon/whats.png" width="20" alt="WhatsApp"></a> <!-- Ícone do WhatsApp -->
+            <a href="#"><img src="assets/img/icon/mail.png" width="20" alt="Email"></a> <!-- Ícone de e-mail -->
+            <a href="https://www.instagram.com/nobugg7/"><img src="assets/img/icon/instagram.png" width="20" alt="Instagram"></a> <!-- Ícone do Instagram -->
         </div>
-        <p>Todos os direitos reservados à NoBug.</p>
-    </footer>
+        <p class="direitos">Todos os direitos reservados à NoBug.</p> <!-- Texto de direitos reservados -->
+    </footer> <!-- Fim do rodapé -->
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
