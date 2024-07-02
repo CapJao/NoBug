@@ -9,24 +9,21 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Início do Banner de Notificação -->
     <div id="notificationBanner" class="notification-banner">
         <span id="notificationMessage" class="text-success"></span>
         <button type="button" class="close" aria-label="Close" id="closeNotification">
             <span aria-hidden="true">&times;</span>
         </button>
     </div>
-    <!-- Fim do Banner de Notificação -->
 
-    <!-- Início do Cabeçalho -->
     <header class="container-fluid p-3 border-bottom">
         <div class="d-flex justify-content-between align-items-center">
             <button class="navbar-toggler d-block d-md-none" type="button">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="d-none d-md-flex">
-                <a href="#" class="mr-3">Home</a>
-                <a href="#">My Account</a>
+                <a href="index.html" class="mr-3">Home</a>
+                <a href="login.html">My Account</a>
             </div>
             <div class="text-center flex-grow-1">
                 <img src="assets/img/logo/logo.png" alt="NoBug Logo" class="img-fluid logo">
@@ -38,17 +35,15 @@
             </div>
         </div>
     </header>
-    <!-- Fim do Cabeçalho -->
 
-    <!-- Início do Menu Popup -->
     <div id="popupMenu" class="popup-menu">
         <button class="close-btn">
             <img src="assets/img/icon/close.png" alt="Close" class="img-fluid">
         </button>
         <div class="popup-content">
-            <a href="#">Home</a>
-            <a href="#">Minha Conta</a>
-            <a href="#">Trocas e Devoluções</a>
+            <a href="index.html">Home</a>
+            <a href="login.html">Minha Conta</a>
+            <a href="troca.html">Trocas e Devoluções</a>
             <div class="social-icons mt-5">
                 <a href="#"><img src="assets/img/icon/whats.png" width="30" alt="WhatsApp"></a>
                 <a href="#"><img src="assets/img/icon/mail.png" width="30" alt="Email"></a>
@@ -56,78 +51,55 @@
             </div>
         </div>
     </div>
-    <!-- Fim do Menu Popup -->
 
-    <!-- Início do Conteúdo Principal -->
     <main class="container my-5">
-        <!-- Início da Linha de Produtos -->
         <div class="row">
-            <!-- Início do Produto 1 -->
             <div class="col-md-4 text-center product-box">
                 <img src="assets/img/products/product (1).png" alt="Camiseta Básica Branca" class="img-fluid product-image">
                 <h2 class="h5 mt-3">Camiseta Básica Branca</h2>
                 <p>R$79,90</p>
                 <button class="btn btn-comprar" data-toggle="modal" data-target="#sizeModal" data-name="Camiseta Básica Branca" data-price="79.90">Comprar</button>
             </div>
-            <!-- Fim do Produto 1 -->
-
-            <!-- Início do Produto 2 -->
             <div class="col-md-4 text-center product-box">
                 <img src="assets/img/products/product (2).png" alt="Camiseta Básica Preta" class="img-fluid product-image">
                 <h2 class="h5 mt-3">Camiseta Básica Preta</h2>
                 <p>R$79,90</p>
                 <button class="btn btn-comprar" data-toggle="modal" data-target="#sizeModal" data-name="Camiseta Básica Preta" data-price="79.90">Comprar</button>
             </div>
-            <!-- Fim do Produto 2 -->
-
-            <!-- Início do Produto 3 -->
             <div class="col-md-4 text-center product-box">
                 <img src="assets/img/products/product (5).png" alt="Camiseta Básica Cinza" class="img-fluid product-image">
                 <h2 class="h5 mt-3">Camiseta Básica Cinza</h2>
                 <p>R$79,90</p>
                 <button class="btn btn-comprar" data-toggle="modal" data-target="#sizeModal" data-name="Camiseta Básica Cinza" data-price="79.90">Comprar</button>
             </div>
-            <!-- Fim do Produto 3 -->
         </div>
-        <!-- Fim da Linha de Produtos -->
-
-        <!-- Início da Linha de Produtos Adicionais -->
         <div class="row mt-5">
-            <!-- Início do Produto 4 -->
             <div class="col-md-4 text-center product-box">
                 <img src="assets/img/products/product (4).png" alt="Calça Jeans Baggy" class="img-fluid product-image">
                 <h2 class="h5 mt-3">Calça Jeans Baggy</h2>
                 <p>R$179,90</p>
                 <button class="btn btn-comprar" data-toggle="modal" data-target="#sizeModal" data-name="Calça Jeans Baggy" data-price="179.90">Comprar</button>
             </div>
-            <!-- Fim do Produto 4 -->
-
-            <!-- Início do Produto 5 -->
             <div class="col-md-4 text-center product-box">
                 <img src="assets/img/products/product (3).png" alt="Bermuda Jeans Baggy" class="img-fluid product-image">
                 <h2 class="h5 mt-3">Bermuda Jeans Baggy</h2>
                 <p>R$149,90</p>
                 <button class="btn btn-comprar" data-toggle="modal" data-target="#sizeModal" data-name="Bermuda Jeans Baggy" data-price="149.90">Comprar</button>
             </div>
-            <!-- Fim do Produto 5 -->
         </div>
-        <!-- Fim da Linha de Produtos Adicionais -->
     </main>
-    <!-- Fim do Conteúdo Principal -->
 
-    <!-- Início do Rodapé -->
-    <footer class="text-center py-5">
-        <p class="mb-1">TROCAS E DEVOLUÇÕES</p>
-        <div class="social-icons mb-3">
-            <a href="#"><img src="assets/img/icon/whats.png" width="30" alt="WhatsApp"></a>
-            <a href="#"><img src="assets/img/icon/mail.png" width="30" alt="Email"></a>
-            <a href="#"><img src="assets/img/icon/instagram.png" width="30" alt="Instagram"></a>
+    <!-- Footer Section -->
+    <footer class="text-center py-5"> <!-- Rodapé da página com padding top e bottom de 5 unidades -->
+        <button class="buttont">TROCAS E DEVOLUÇÕES</button> <!-- Parágrafo com título de trocas e devoluções -->
+        <div class="social-icons mb-3"> <!-- Ícones sociais -->
+            <a href="#"><img src="assets/img/icon/whats.png" width="20" alt="WhatsApp"></a> <!-- Ícone do WhatsApp -->
+            <a href="#"><img src="assets/img/icon/mail.png" width="20" alt="Email"></a> <!-- Ícone de e-mail -->
+            <a href="https://www.instagram.com/nobugg7/"><img src="assets/img/icon/instagram.png" width="20" alt="Instagram"></a> <!-- Ícone do Instagram -->
         </div>
-        <p>Todos os direitos reservados à NoBug.</p>
-    </footer>
-    <!-- Fim do Rodapé -->
+        <p class="direitos">Todos os direitos reservados à NoBug.</p> <!-- Texto de direitos reservados -->
+    </footer> <!-- Fim do rodapé -->
 
-    <!-- Início do Modal de Carrinho -->
     <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -147,9 +119,7 @@
             </div>
         </div>
     </div>
-    <!-- Fim do Modal de Carrinho -->
 
-    <!-- Início do Modal de Seleção de Tamanho -->
     <div class="modal fade" id="sizeModal" tabindex="-1" role="dialog" aria-labelledby="sizeModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -181,7 +151,6 @@
             </div>
         </div>
     </div>
-    <!-- Fim do Modal de Seleção de Tamanho -->
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
