@@ -21,8 +21,8 @@
     <header class="container-fluid p-3 border-bottom"> <!-- Cabeçalho com classe de container fluido, padding e borda inferior -->
         <div class="d-flex justify-content-between align-items-center"> <!-- Div com classes para layout flexível, espaçamento e alinhamento --> 
             <div class="d-flex"> <!-- Div para links de navegação com layout flexível -->
-                <a href="#" class="mr-3">Home</a> <!-- Link para a página inicial com margem direita -->
-                <a href="#">My Account</a> <!-- Link para a página da conta do usuário -->
+                <a href="index.html" class="mr-3">Home</a> <!-- Link para a página inicial com margem direita -->
+                <a href="login.html">My Account</a> <!-- Link para a página da conta do usuário -->
             </div>
             <div class="text-center"> <!-- Div para centralizar o logo -->
                 <img src="assets/img/logo/logo.png" alt="NoBug Logo" class="img-fluid logo"> <!-- Imagem do logo com classes para tornar fluida e estilização -->
@@ -102,24 +102,27 @@
                     <span>(32 Avaliações)</span> <!-- Span para exibir o número de avaliações -->
                 </div>
                 <p>em até 3x no cartão sem juros</p> <!-- Parágrafo indicando as condições de pagamento -->
-                <div class="mb-3"> <!-- Div com margem inferior -->
-                    <button class="btn btn-outline-secondary size-btn">P</button> <!-- Botão para selecionar tamanho P -->
-                    <button class="btn btn-outline-secondary size-btn">M</button> <!-- Botão para selecionar tamanho M -->
-                    <button class="btn btn-outline-secondary size-btn">G</button> <!-- Botão para selecionar tamanho G -->
-                    <button class="btn btn-outline-secondary size-btn">XG</button> <!-- Botão para selecionar tamanho XG -->
+                <div class="mb-3">
+                    <button class="btn btn-outline-secondary size-btn" onclick="selectSize('P')" data-size="P">P</button>
+                    <button class="btn btn-outline-secondary size-btn" onclick="selectSize('M')" data-size="M">M</button>
+                    <button class="btn btn-outline-secondary size-btn" onclick="selectSize('G')" data-size="G">G</button>
+                    <button class="btn btn-outline-secondary size-btn" onclick="selectSize('XG')" data-size="XG">XG</button>
                 </div>
-                <div class="d-flex align-items-center mb-3"> <!-- Div para layout flexível e alinhamento com margem inferior -->
-                    <div class="input-group quantity-box mr-3"> <!-- Grupo de entrada para a quantidade com margem direita -->
-                        <div class="input-group-prepend"> <!-- Div para adicionar elementos antes do campo de entrada -->
-                            <button class="btn btn-outline-secondary quantity-btn" type="button">-</button> <!-- Botão para diminuir a quantidade -->
+                
+                <div class="d-flex align-items-center mb-3">
+                    <div class="input-group quantity-box mr-3">
+                        <div class="input-group-prepend">
+                            <button class="btn btn-outline-secondary quantity-btn" type="button" onclick="decreaseQuantity()">-</button>
                         </div>
-                        <input type="text" class="form-control text-center" value="1"> <!-- Campo de entrada para a quantidade com texto centralizado -->
-                        <div class="input-group-append"> <!-- Div para adicionar elementos depois do campo de entrada -->
-                            <button class="btn btn-outline-secondary quantity-btn" type="button">+</button> <!-- Botão para aumentar a quantidade -->
+                        <input id="quantityInput" type="text" class="form-control text-center" value="1">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary quantity-btn" type="button" onclick="increaseQuantity()">+</button>
                         </div>
                     </div>
-                    <button class="btn btn-comprar">Comprar</button> <!-- Botão para adicionar o produto ao carrinho -->
+                    <button class="btn btn-comprar" onclick="addToCart()">Comprar</button>
                 </div>
+
+                
                 <div class="mt-3"> <!-- Div com margem superior -->
                     <input type="text" class="form-control mb-2" placeholder="CEP"> <!-- Campo de entrada para o CEP com margem inferior -->
                     <button class="btn btn-calcular">Calcular</button> <!-- Botão para calcular o frete -->
@@ -156,19 +159,20 @@
     </main>
     
     <!-- Footer Section -->
-    <footer class="text-center py-5"> <!-- Rodapé com texto centralizado e padding vertical -->
-        <p class="mb-1">TROCAS E DEVOLUÇÕES</p>  <!-- Parágrafo com margem inferior pequena -->
-        <div class="social-icons mb-3"> <!-- Div para ícones de redes sociais com margem inferior -->
-            <a href="#"><img src="assets/img/icon/whats.png" width="30" alt="WhatsApp"></a> <!-- Link para WhatsApp com ícone e largura de 30 pixels -->
-            <a href="#"><img src="assets/img/icon/mail.png" width="30" alt="Email"></a> <!-- Link para Email com ícone e largura de 30 pixels -->
-            <a href="#"><img src="assets/img/icon/instagram.png" width="30" alt="Instagram"></a> <!-- Link para Instagram com ícone e largura de 30 pixels -->
+    <footer class="text-center py-5"> <!-- Rodapé da página com padding top e bottom de 5 unidades -->
+        <button class="buttont">TROCAS E DEVOLUÇÕES</button> <!-- Parágrafo com título de trocas e devoluções -->
+        <div class="social-icons mb-3"> <!-- Ícones sociais -->
+            <a href="#"><img src="assets/img/icon/whats.png" width="20" alt="WhatsApp"></a> <!-- Ícone do WhatsApp -->
+            <a href="#"><img src="assets/img/icon/mail.png" width="20" alt="Email"></a> <!-- Ícone de e-mail -->
+            <a href="https://www.instagram.com/nobugg7/"><img src="assets/img/icon/instagram.png" width="20" alt="Instagram"></a> <!-- Ícone do Instagram -->
         </div>
-        <p>Todos os direitos reservados à NoBug.</p> <!-- Parágrafo indicando direitos reservados -->
-    </footer>
+        <p class="direitos">Todos os direitos reservados à NoBug.</p> <!-- Texto de direitos reservados -->
+    </footer> <!-- Fim do rodapé -->
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script> <!-- Script para carregar a biblioteca jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script> <!-- Script para carregar a biblioteca Popper.js -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> <!-- Script para carregar o JavaScript do Bootstrap -->
+    <script src="assets/js/buttonsproduct.js"></script>
     <script src="assets/js/adicionarProdutoCarrinho.js"></script> <!-- Script personalizado para adicionar produtos ao carrinho -->
 </body> <!-- Fim do corpo do documento -->
 </html> <!-- Fim do documento HTML -->
