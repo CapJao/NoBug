@@ -250,6 +250,7 @@ header .navbar-toggler-icon {
     margin-bottom: 20px;
     border-radius: 10px;
     transition: transform 0.3s ease;
+    cursor: pointer;
 }
  
 .product-box:hover {
@@ -512,7 +513,7 @@ form .btn-finalizar:hover {
     padding: 10px 20px;
     font-size: 14px;
     border-radius: 25px;
-    width: 600px;
+    width: 50%;
     outline: none;
     align-items: center;
     justify-content: center;
@@ -602,7 +603,7 @@ form .btn-finalizar:hover {
     padding: 10px 20px;
     font-size: 14px;
     border-radius: 25px;
-    width: 600px;
+    width: 50%;
     outline: none;
     align-items: center;
     justify-content: center;
