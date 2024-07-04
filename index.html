@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,34 +9,42 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+    <!-- Início da Notificação -->
     <div id="notificationBanner" class="notification-banner">
         <span id="notificationMessage" class="text-success"></span>
         <button type="button" class="close" aria-label="Close" id="closeNotification">
             <span aria-hidden="true">&times;</span>
         </button>
     </div>
+    <!-- Fim da Notificação -->
 
-    <header class="container-fluid p-3 border-bottom">
+    <!-- Início do Cabeçalho -->
+    <header class="container-fluid p-3 border-bottom header-fixed">
         <div class="d-flex justify-content-between align-items-center">
-            <button class="navbar-toggler d-block d-md-none" type="button">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="d-none d-md-flex">
-                <a href="index.html" class="mr-3">Home</a>
-                <a href="login.html">My Account</a>
+            <div class="menu-section">
+                <button class="navbar-toggler d-block d-md-none" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="d-none d-md-flex">
+                    <a href="index.html" class="mr-3">Home</a>
+                    <a href="login.html">My Account</a>
+                </div>
             </div>
-            <div class="text-center flex-grow-1">
-                <img src="assets/img/logo/logo.png" alt="NoBug Logo" class="img-fluid logo">
+            <div class="logo-section text-center">
+                <a href="index.html"><img src="assets/img/logo/logo.png" alt="NoBug Logo" class="img-fluid logo"></a>
             </div>
-            <div class="d-flex justify-content-end align-items-center">
+            <div class="cart-section d-flex justify-content-end align-items-center">
                 <a href="#" id="cart-icon" data-toggle="modal" data-target="#cartModal">
                     <img src="assets/img/icon/carrinho.png" width="35" alt="Cart" class="img-fluid">
                 </a>
             </div>
         </div>
     </header>
+    <!-- Fim do Cabeçalho -->
 
+    <!-- Início do Menu Popup -->
     <div id="popupMenu" class="popup-menu">
         <button class="close-btn">
             <img src="assets/img/icon/close.png" alt="Close" class="img-fluid">
@@ -47,64 +56,71 @@
             <div class="social-icons mt-5">
                 <a href="#"><img src="assets/img/icon/whats.png" width="30" alt="WhatsApp"></a>
                 <a href="#"><img src="assets/img/icon/mail.png" width="30" alt="Email"></a>
-                <a href="#"><img src="assets/img/icon/instagram.png" width="30" alt="Instagram"></a>
+                <a href="https://www.instagram.com/nobugg7/"><img src="assets/img/icon/instagram.png" width="30" alt="Instagram"></a>
             </div>
         </div>
     </div>
+    <!-- Fim do Menu Popup -->
 
+    <!-- Início do Conteúdo Principal -->
     <main class="container my-5">
+        <div class="spacer"></div>
         <div class="row">
             <div class="col-md-4 text-center product-box">
-                <img src="assets/img/products/product (1).png" alt="Camiseta Básica Branca" class="img-fluid product-image">
-                <h2 class="h5 mt-3">Camiseta Básica Branca</h2>
-                <p>R$79,90</p>
-                <button class="btn btn-comprar" data-toggle="modal" data-target="#sizeModal" data-name="Camiseta Básica Branca" data-price="79.90">Comprar</button>
+                <img src="assets/img/products/product (1).png" alt="Camiseta Básica Branca" class="img-fluid product-image" data-href="camisabranca.html">
+                <h2 class="h5 mt-3" data-href="camisabranca.html">Camiseta Básica Branca</h2>
+                <p class="product-price" data-href="camisabranca.html"><strong>R$79,90</strong></p>
+                <p class="product-price" data-href="camisabranca.html">5x de R$15,98</p>
             </div>
             <div class="col-md-4 text-center product-box">
-                <img src="assets/img/products/product (2).png" alt="Camiseta Básica Preta" class="img-fluid product-image">
-                <h2 class="h5 mt-3">Camiseta Básica Cinza</h2>
-                <p>R$79,90</p>
-                <button class="btn btn-comprar" data-toggle="modal" data-target="#sizeModal" data-name="Camiseta Básica Preta" data-price="79.90">Comprar</button>
+                <img src="assets/img/products/product (2).png" alt="Camiseta Básica Cinza" class="img-fluid product-image" data-href="camisacinza.html">
+                <h2 class="h5 mt-3" data-href="camisacinza.html">Camiseta Básica Cinza</h2>
+                <p class="product-price" data-href="camisacinza.html"><strong>R$79,90</strong></p>
+                <p class="product-price" data-href="camisacinza.html">5x de R$15,98</p>
             </div>
             <div class="col-md-4 text-center product-box">
-                <img src="assets/img/products/product (5).png" alt="Camiseta Básica Cinza" class="img-fluid product-image">
-                <h2 class="h5 mt-3">Camiseta Básica Preta</h2>
-                <p>R$79,90</p>
-                <button class="btn btn-comprar" data-toggle="modal" data-target="#sizeModal" data-name="Camiseta Básica Cinza" data-price="79.90">Comprar</button>
+                <img src="assets/img/products/product (5).png" alt="Camiseta Básica Preta" class="img-fluid product-image" data-href="camisapreta.html">
+                <h2 class="h5 mt-3" data-href="camisapreta.html">Camiseta Básica Preta</h2>
+                <p class="product-price" data-href="camisapreta.html"><strong>R$79,90</strong></p>
+                <p class="product-price" data-href="camisapreta.html">5x de R$15,98</p>
             </div>
         </div>
         <div class="row mt-5">
             <div class="col-md-4 text-center product-box">
-                <img src="assets/img/products/12 (3)-Photoroom.png" width="350px" height="400px" alt="Bermuda Jeans Baggy" class="img-fluid product-image">
-                <h2 class="h5 mt-3">Moletom Básico Preto</h2>
-                <p>R$199,90</p>
-                <button class="btn btn-comprar" data-toggle="modal" data-target="#sizeModal" data-name="Bermuda Jeans Baggy" data-price="149.90">Comprar</button>
+                <img src="assets/img/products/12 (3)-Photoroom.png" width="350px" height="400px" alt="Moletom Básico Preto" class="img-fluid product-image" data-href="moletom.html">
+                <h2 class="h5 mt-3" data-href="moletom.html">Moletom Básico Preto</h2>
+                <p class="product-price" data-href="moletom.html"><strong>R$199,90</strong></p>
+                <p class="product-price" data-href="moletom.html">5x de R$39,98</p>
             </div>
             <div class="col-md-4 text-center product-box">
-                <img src="assets/img/products/product (4).png" alt="Calça Jeans Baggy" class="img-fluid product-image">
-                <h2 class="h5 mt-3">Calça Jeans Baggy</h2>
-                <p>R$179,90</p>
-                <button class="btn btn-comprar" data-toggle="modal" data-target="#sizeModal" data-name="Calça Jeans Baggy" data-price="179.90">Comprar</button>
+                <img src="assets/img/products/product (4).png" alt="Calça Jeans Baggy" class="img-fluid product-image" data-href="calçajeans.html">
+                <h2 class="h5 mt-3" data-href="calçajeans.html">Calça Jeans Baggy</h2>
+                <p class="product-price" data-href="calçajeans.html"><strong>R$179,90</strong></p>
+                <p class="product-price" data-href="calçajeans.html">5x de R$35,98</p>
             </div>
             <div class="col-md-4 text-center product-box">
-                <img src="assets/img/products/12.png" width="350px" height="400px" alt="Bermuda Jeans Baggy" class="img-fluid product-image">
-                <h2 class="h5 mt-3">Bermuda Jeans Baggy</h2>
-                <p>R$149,90</p>
-                <button class="btn btn-comprar" data-toggle="modal" data-target="#sizeModal" data-name="Bermuda Jeans Baggy" data-price="149.90">Comprar</button>
+                <img src="assets/img/products/12.png" width="350px" height="400px" alt="Bermuda Jeans Baggy" class="img-fluid product-image" data-href="bermudajeans.html">
+                <h2 class="h5 mt-3" data-href="bermudajeans.html">Bermuda Jeans Baggy</h2>
+                <p class="product-price" data-href="bermudajeans.html"><strong>R$149,90</strong></p>
+                <p class="product-price" data-href="bermudajeans.html">5x de R$29,98</p>
+            </div>
         </div>
     </main>
+    <!-- Fim do Conteúdo Principal -->
 
-    <!-- Footer Section -->
-    <footer class="text-center py-5"> <!-- Rodapé da página com padding top e bottom de 5 unidades -->
-        <button class="buttont">TROCAS E DEVOLUÇÕES</button> <!-- Parágrafo com título de trocas e devoluções -->
-        <div class="social-icons mb-3"> <!-- Ícones sociais -->
-            <a href="#"><img src="assets/img/icon/whats.png" width="20" alt="WhatsApp"></a> <!-- Ícone do WhatsApp -->
-            <a href="#"><img src="assets/img/icon/mail.png" width="20" alt="Email"></a> <!-- Ícone de e-mail -->
-            <a href="https://www.instagram.com/nobugg7/"><img src="assets/img/icon/instagram.png" width="20" alt="Instagram"></a> <!-- Ícone do Instagram -->
+    <!-- Início do Rodapé -->
+    <footer class="text-center py-5">
+        <a href="troca.html"><button class="buttont">TROCAS E DEVOLUÇÕES</button></a>
+        <div class="social-icons mb-3">
+            <a href="#"><img src="assets/img/icon/whats.png" width="20" alt="WhatsApp"></a>
+            <a href="#"><img src="assets/img/icon/mail.png" width="20" alt="Email"></a>
+            <a href="https://www.instagram.com/nobugg7/"><img src="assets/img/icon/instagram.png" width="20" alt="Instagram"></a>
         </div>
-        <p class="direitos">Todos os direitos reservados à NoBug.</p> <!-- Texto de direitos reservados -->
-    </footer> <!-- Fim do rodapé -->
+        <p class="direitos">Todos os direitos reservados à NoBug.</p>
+    </footer>
+    <!-- Fim do Rodapé -->
 
+    <!-- Início do Modal do Carrinho -->
     <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -118,13 +134,15 @@
                     <p>Seu carrinho está vazio.</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-comprar" id="clearCartButton">Limpar Carrinho</button>
+                    <button type="button" class="btn btn-claro" id="clearCartButton">Limpar Carrinho</button>
                     <button type="button" class="btn btn-comprar">Finalizar Compra</button>
                 </div>
             </div>
         </div>
     </div>
+    <!-- Fim do Modal do Carrinho -->
 
+    <!-- Início do Modal de Tamanho -->
     <div class="modal fade" id="sizeModal" tabindex="-1" role="dialog" aria-labelledby="sizeModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -138,7 +156,8 @@
                     <form id="sizeForm">
                         <div class="form-group">
                             <label for="sizeSelect">Tamanho</label>
-                            <select class="form-control" id="sizeSelect">
+                            <select class="form-control size-btn" id="sizeSelect">
+                                <option value="">Selecione</option>
                                 <option value="P">P</option>
                                 <option value="M">M</option>
                                 <option value="G">G</option>
@@ -147,6 +166,15 @@
                         </div>
                         <input type="hidden" id="productName">
                         <input type="hidden" id="productPrice">
+                        <div class="input-group quantity-box mr-3">
+                            <div class="input-group-prepend">
+                                <button class="btn btn-outline-secondary quantity-btn" type="button" id="decreaseQuantityButton">-</button>
+                            </div>
+                            <input id="quantityInput" type="text" class="form-control text-center" value="1">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary quantity-btn" type="button" id="increaseQuantityButton">+</button>
+                            </div>
+                        </div>
                     </form>
                 </div>
                 <div class="modal-footer">
@@ -156,11 +184,17 @@
             </div>
         </div>
     </div>
+    <!-- Fim do Modal de Tamanho -->
 
+    <!-- Início dos Scripts -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="assets/js/adicionarProdutoCarrinho.js"></script>
     <script src="assets/js/abrirFecharMenuHamburger.js"></script>
+    <script src="assets/js/movimentoHeader.js"></script>
+    <script src="assets/js/mouseHover.js"></script>
+    <!-- Fim dos Scripts -->
 </body>
+
 </html>

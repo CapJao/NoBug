@@ -26,11 +26,13 @@ h1 {
     color: #000000;
     text-align: center;
     margin-top: 0.5em;
+    text-align: left;
 }
  
 h2 {
     font-size: 2em;
     color: #000000;
+
 }
  
 h3 {
@@ -76,50 +78,92 @@ a:hover {
 header {
     background-color: #ffffff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: top 0.3s;
 }
- 
+
 header .logo {
     max-width: 100%;
     height: auto;
 }
- 
-header a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
+
+header .menu-section {
+    flex: 0 0 30%;
     font-style: italic;
-    font-family: 'Poppins', sans-serif;
 }
- 
+
+header .logo-section {
+    flex: 0 0 40%;
+}
+
+header .cart-section {
+    flex: 0 0 30%;
+}
+
 header .d-flex {
     display: flex;
     align-items: center;
 }
- 
+
 header .justify-content-between {
     justify-content: space-between;
 }
- 
+
 header .justify-content-end {
     justify-content: flex-end;
 }
- 
+
 header .align-items-center {
     align-items: center;
 }
- 
+
 header .navbar-toggler {
     border: none;
     background: none;
 }
- 
+
 header .navbar-toggler-icon {
     width: 25px;
     height: 25px;
-    background-image: url("assets/img/icon/menu.png"); /* Certifique-se de que o ícone do menu esteja no caminho correto */
+    background-image: url("assets/img/icon/menu.png");
     background-size: cover;
 }
- 
+
+/* Mobile Header Styles */
+@media (max-width: 767px) {
+    header .logo-section {
+        text-align: center;
+    }
+
+    header .navbar-toggler {
+        display: block;
+        color: #000;
+    }
+
+    header .d-none {
+        display: none !important;
+    }
+}
+
+/* Desktop Header Styles */
+@media (min-width: 768px) {
+    header .navbar-toggler {
+        display: none;
+    }
+}
+
+/* Header Scroll Behavior */
+.header-fixed {
+    top: 0;
+}
+
+.header-hidden {
+    top: -100px; /* Adjust this value based on your header height */
+}
+
 /* Mobile Header Styles */
 @media (max-width: 767px) {
     header .text-center {
@@ -292,42 +336,74 @@ footer .social-icons img {
     margin: 0 10px;
 }
  
-/* Modal Styles */
-.modal-body p {
-    text-align: center;
+/* Modal Styles e Notification Banner Styles */
+.modal-lg-custom {
+    max-width: 80%;
+    margin: auto;
 }
- 
-/* Notification Banner Styles */
-.notification-banner {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #fff;
-    border-bottom: 1px solid #e5e5e5;
-    padding: 10px;
+
+.modal-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    padding: 1rem 1.5rem;
+}
+
+.modal-title {
+    margin-bottom: 0;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+.modal-footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid #dee2e6;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    padding: 1rem 1.5rem;
+}
+
+.modal-footer .btn {
+    min-width: 120px;
+}
+
+.notification-banner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 1050;
+    padding: 2rem;
+    background-color: #ffffff;
+    border: 1px solid #c3e6cb;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
     display: none;
+    text-align: center;
+    border-radius: 5px;
 }
- 
+
 .notification-banner.show {
-    display: flex;
+    display: block;
 }
- 
+
 .notification-banner .close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: transparent;
     border: none;
-    background: none;
-    font-size: 20px;
-    line-height: 20px;
-    cursor: pointer;
 }
+
  
 /* Espaço vazio no final */
 .spacer {
     height: 100px;
+}
+.spacer1 {
+    height: 20px;
 }
  
 /* Breadcrumb Styles */
@@ -677,3 +753,47 @@ form .btn-finalizar:hover {
 ::-webkit-scrollbar {
     display: none;
   }
+  
+/*quantidade carrinho*/
+
+  .cart-count {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 14px;
+    display: none; /* Inicialmente escondido */
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 17px;
+}
+
+/* Ajuste para alinhamento de preços */
+.product-box .product-price {
+    margin-bottom: 0;
+}
+
+.product-box .product-installment {
+    margin-top: 0;
+}
+
+/* Ajuste texto página de troca */
+
+.main-content {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* Ajuste PREÇO parcelado */
+
+.product-price {
+    margin-bottom: 0;
+}
+
+.product-installment {
+    margin-top: 0;
+}

@@ -9,87 +9,61 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Notification Banner -->
+    <!-- Início da Notificação -->
     <div id="notificationBanner" class="notification-banner">
         <span id="notificationMessage" class="text-success"></span>
         <button type="button" class="close" aria-label="Close" id="closeNotification">
             <span aria-hidden="true">&times;</span>
         </button>
     </div>
+    <!-- Fim da Notificação -->
 
-    <!-- Header Section -->
-    <header class="container-fluid p-3 border-bottom">
+    <!-- Início do Cabeçalho -->
+    <header class="container-fluid p-3 border-bottom header-fixed">
         <div class="d-flex justify-content-between align-items-center">
-            <div class="d-flex">
-                <a href="#" class="mr-3">Home</a>
-                <a href="#">My Account</a>
+            <div class="menu-section">
+                <button class="navbar-toggler d-block d-md-none" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="d-none d-md-flex">
+                    <a href="index.html" class="mr-3">Home</a>
+                    <a href="login.html">My Account</a>
+                </div>
             </div>
-            <div class="text-center">
-                <img src="assets/img/logo/logo.png" alt="NoBug Logo" class="img-fluid logo">
+            <div class="logo-section text-center">
+                <a href="index.html"><img src="assets/img/logo/logo.png" alt="NoBug Logo" class="img-fluid logo"></a>
             </div>
-            <div class="d-flex justify-content-end align-items-center">
+            <div class="cart-section d-flex justify-content-end align-items-center">
                 <a href="#" id="cart-icon" data-toggle="modal" data-target="#cartModal">
                     <img src="assets/img/icon/carrinho.png" width="35" alt="Cart" class="img-fluid">
                 </a>
             </div>
         </div>
     </header>
+    <!-- Fim do Cabeçalho -->
 
-    <!-- Cart Modal -->
-    <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="cartModalLabel">Carrinho de Compras</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p>Seu carrinho está vazio.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-claro">Limpar Carrinho</button>
-                    <button type="button" class="btn btn-comprar">Finalizar Compra</button>
-                </div>
+    <!-- Início do Menu Popup -->
+    <div id="popupMenu" class="popup-menu">
+        <button class="close-btn">
+            <img src="assets/img/icon/close.png" alt="Close" class="img-fluid">
+        </button>
+        <div class="popup-content">
+            <a href="index.html">Home</a>
+            <a href="login.html">Minha Conta</a>
+            <a href="troca.html">Trocas e Devoluções</a>
+            <div class="social-icons mt-5">
+                <a href="#"><img src="assets/img/icon/whats.png" width="30" alt="WhatsApp"></a>
+                <a href="#"><img src="assets/img/icon/mail.png" width="30" alt="Email"></a>
+                <a href="https://www.instagram.com/nobugg7/"><img src="assets/img/icon/instagram.png" width="30" alt="Instagram"></a>
             </div>
         </div>
     </div>
+    <!-- Fim do Menu Popup -->
 
-    <!-- Size Selection Modal -->
-    <div class="modal fade" id="sizeModal" tabindex="-1" role="dialog" aria-labelledby="sizeModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="sizeModalLabel">Selecione o Tamanho</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form id="sizeForm">
-                        <div class="form-group">
-                            <label for="sizeSelect">Tamanho</label>
-                            <select class="form-control" id="sizeSelect">
-                                <option value="P">P</option>
-                                <option value="M">M</option>
-                                <option value="G">G</option>
-                                <option value="GG">GG</option>
-                            </select>
-                        </div>
-                        <input type="hidden" id="productName">
-                        <input type="hidden" id="productPrice">
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-claro">Cancelar</button>
-                    <button type="button" class="btn btn-comprar">Adicionar ao Carrinho</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
+    <!-- Início do Conteúdo Principal -->
     <!-- Caminho de Navegação -->
+    <div class="spacer"></div>
     <div class="caminho">
         <p>Ínicio > Minha Conta > Login</p>
     </div>
@@ -110,6 +84,7 @@
             </div>
         </div>
     </div>
+    <!-- Fim do Conteúdo Principal -->
 
     <!-- Popup Modal Esqueci a Senha -->
     <div class="modal fade" id="forgotPasswordModal" tabindex="-1" role="dialog" aria-labelledby="forgotPasswordModalLabel" aria-hidden="true">
@@ -137,26 +112,33 @@
         </div>
     </div>
 
-    <!-- Footer Section -->
-    <!-- Footer Section -->
-    <footer class="text-center py-5"> <!-- Rodapé da página com padding top e bottom de 5 unidades -->
-        <button class="buttont">TROCAS E DEVOLUÇÕES</button> <!-- Parágrafo com título de trocas e devoluções -->
-        <div class="social-icons mb-3"> <!-- Ícones sociais -->
-            <a href="#"><img src="assets/img/icon/whats.png" width="20" alt="WhatsApp"></a> <!-- Ícone do WhatsApp -->
-            <a href="#"><img src="assets/img/icon/mail.png" width="20" alt="Email"></a> <!-- Ícone de e-mail -->
-            <a href="https://www.instagram.com/nobugg7/"><img src="assets/img/icon/instagram.png" width="20" alt="Instagram"></a> <!-- Ícone do Instagram -->
+   <!-- Início do Rodapé -->
+    <footer class="text-center py-5">
+        <a href="troca.html"><button class="buttont">TROCAS E DEVOLUÇÕES</button></a>
+        <div class="social-icons mb-3">
+            <a href="#"><img src="assets/img/icon/whats.png" width="20" alt="WhatsApp"></a>
+            <a href="#"><img src="assets/img/icon/mail.png" width="20" alt="Email"></a>
+            <a href="https://www.instagram.com/nobugg7/"><img src="assets/img/icon/instagram.png" width="20" alt="Instagram"></a>
         </div>
-        <p class="direitos">Todos os direitos reservados à NoBug.</p> <!-- Texto de direitos reservados -->
-    </footer> <!-- Fim do rodapé -->
+        <p class="direitos">Todos os direitos reservados à NoBug.</p>
+    </footer>
+    <!-- Fim do Rodapé -->
 
+
+    <!-- Início dos Scripts -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="assets/js/adicionarProdutoCarrinho.js"></script>
+    <script src="assets/js/abrirFecharMenuHamburger.js"></script>
+    <script src="assets/js/movimentoHeader.js"></script>
+    <script src="assets/js/mouseHover.js"></script>
+
     <script>
         document.getElementById('forgotPassword').addEventListener('click', function() {
             $('#forgotPasswordModal').modal('show');
         });
-    </script>
+    </script>    
+    <!-- Fim dos Scripts -->
 </body>
 </html>
