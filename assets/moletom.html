@@ -1,0 +1,241 @@
+ <!-- Essa é uma página de exemplo, ela contém cabeçalho e rodapé apenas -->
+
+ <!DOCTYPE html> <!-- Declaração do tipo de documento como HTML5 -->
+ <html lang="en"> <!-- Início do documento HTML com o idioma definido como inglês -->
+ <head> <!-- Início da seção head, onde ficam metadados e links para recursos externos -->
+     <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a viewport para que a página seja responsiva em dispositivos móveis -->
+     <title>NoBug - Produto</title> <!-- Define o título da página que aparece na aba do navegador -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> <!-- Link para o CSS do Bootstrap para estilização e layout responsivo -->
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"> <!-- Link para importar a fonte Poppins do Google Fonts -->
+     <link rel="stylesheet" href="styles.css"> <!-- Link para um arquivo CSS personalizado chamado styles.css -->
+ </head>
+ <body> <!-- Início do corpo do documento HTML -->
+     <!-- Notification Banner --> 
+     <div id="notificationBanner" class="notification-banner"> <!-- Div para o banner de notificação, com um id e uma classe para estilização -->
+         <span id="notificationMessage" class="text-success"></span> <!-- Span para exibir a mensagem de notificação, com um id e uma classe para texto de sucesso -->
+         <button type="button" class="close" aria-label="Close" id="closeNotification"> <!-- Botão para fechar a notificação, com um id e atributos para acessibilidade -->
+             <span aria-hidden="true">&times;</span> <!-- Span que contém o símbolo "×", oculto para leitores de tela -->
+         </button>
+     </div>
+ 
+     <!-- Header Section -->
+     <header class="container-fluid p-3 border-bottom"> <!-- Cabeçalho com classes Bootstrap para estilo, espaçamento e borda inferior -->
+         <div class="d-flex justify-content-between align-items-center"> <!-- Div com layout flexível para distribuir o conteúdo entre os elementos -->
+             <div class="d-flex"> <!-- Div com layout flexível para os links de navegação -->
+                 <a href="index.html" class="mr-3">Home</a> <!-- Link para a página inicial com margem à direita -->
+                 <a href="login.html">My Account</a> <!-- Link para a página "My Account" -->
+             </div>
+             <div class="text-center"> <!-- Div para centralizar o conteúdo -->
+                 <img src="assets/img/logo/logo.png" alt="NoBug Logo" class="img-fluid logo"> <!-- Imagem do logo da empresa com classes para responsividade e estilo -->
+             </div>
+             <div class="d-flex justify-content-end align-items-center"> <!-- Div com layout flexível para alinhar o conteúdo à direita -->
+                 <a href="#" id="cart-icon" data-toggle="modal" data-target="#cartModal"> <!-- Link para abrir o modal do carrinho, com id e atributos data para funcionalidade do Bootstrap -->
+                     <img src="assets/img/icon/carrinho.png" width="35" alt="Cart" class="img-fluid"> <!-- Imagem do ícone do carrinho com largura definida e classes para responsividade -->
+                 </a>
+             </div>
+         </div>
+     </header>
+ 
+     <!-- Cart Modal -->
+     <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true"> <!-- Div principal do modal do carrinho, com classes e atributos para o funcionamento do Bootstrap -->
+         <div class="modal-dialog" role="document"> <!-- Div para o diálogo do modal, configurando o papel do modal como um documento -->
+             <div class="modal-content"> <!-- Div para o conteúdo do modal -->
+                 <div class="modal-header"> <!-- Cabeçalho do modal -->
+                     <h5 class="modal-title" id="cartModalLabel">Carrinho de Compras</h5> <!-- Título do modal com id para referência -->
+                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <!-- Botão para fechar o modal, com atributos para funcionalidade e acessibilidade -->
+                         <span aria-hidden="true">&times;</span> <!-- Span com símbolo "×", oculto para leitores de tela -->
+                     </button>
+                 </div>
+                 <div class="modal-body"> <!-- Corpo do modal -->
+                     <p>Seu carrinho está vazio.</p> <!-- Mensagem indicando que o carrinho está vazio -->
+                 </div>
+                 <div class="modal-footer"> <!-- Rodapé do modal -->
+                     <button type="button" class="btn btn-claro">Limpar Carrinho</button> <!-- Botão para limpar o carrinho -->
+                     <button type="button" class="btn btn-comprar">Finalizar Compra</button> <!-- Botão para finalizar a compra -->
+                 </div>
+             </div>
+         </div>
+     </div>
+ 
+      <!-- Size Selection Modal -->
+      <div class="modal fade" id="sizeModal" tabindex="-1" role="dialog" aria-labelledby="sizeModalLabel" aria-hidden="true"> <!-- Div principal do modal de seleção de tamanho, com classes e atributos para o funcionamento do Bootstrap -->
+         <div class="modal-dialog" role="document"> <!-- Div para o diálogo do modal, configurando o papel do modal como um documento -->
+             <div class="modal-content"> <!-- Div para o conteúdo do modal -->
+                 <div class="modal-header"> <!-- Cabeçalho do modal -->
+                     <h5 class="modal-title" id="sizeModalLabel">Selecione o Tamanho</h5> <!-- Título do modal com id para referência -->
+                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <!-- Botão para fechar o modal, com atributos para funcionalidade e acessibilidade -->
+                         <span aria-hidden="true">&times;</span> <!-- Span com símbolo "×", oculto para leitores de tela -->
+                     </button>
+                 </div>
+                 <div class="modal-body"> <!-- Corpo do modal -->
+                     <form id="sizeForm"> <!-- Formulário para seleção de tamanho, com id para referência -->
+                         <div class="form-group"> <!-- Grupo de formulário -->
+                             <label for="sizeSelect">Tamanho</label> <!-- Rótulo para o campo de seleção de tamanho -->
+                             <select class="form-control" id="sizeSelect"> <!-- Campo de seleção com classe para estilização e id para referência -->
+                                 <option value="P">P</option> <!-- Opção de tamanho P -->
+                                 <option value="M">M</option> <!-- Opção de tamanho M -->
+                                 <option value="G">G</option> <!-- Opção de tamanho G -->
+                                 <option value="GG">GG</option> <!-- Opção de tamanho GG -->
+                             </select>
+                         </div>
+                         <input type="hidden" id="productName"> <!-- Campo oculto para armazenar o nome do produto -->
+                         <input type="hidden" id="productPrice"> <!-- Campo oculto para armazenar o preço do produto -->
+                     </form>
+                 </div>
+                 <div class="modal-footer"> <!-- Rodapé do modal -->
+                     <button type="button" class="btn btn-claro">Cancelar</button> <!-- Botão para cancelar a ação -->
+                     <button type="button" class="btn btn-comprar">Adicionar ao Carrinho</button> <!-- Botão para adicionar o item ao carrinho -->
+                 </div>
+             </div>
+         </div>
+     </div>
+     <!-- Aqui entra o conteúdo da página -->
+<!-- Main Content -->
+<div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true"> <!-- Div para o modal com classes de fade, ID e atributos de acessibilidade -->
+    <div class="modal-dialog" role="document"> <!-- Div para o diálogo do modal -->
+        <div class="modal-content"> <!-- Div para o conteúdo do modal -->
+            <div class="modal-header"> <!-- Cabeçalho do modal -->
+                <h5 class="modal-title" id="cartModalLabel">Carrinho de Compras</h5> <!-- Título do modal com ID para acessibilidade -->
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <!-- Botão para fechar o modal -->
+                    <span aria-hidden="true">&times;</span> <!-- Ícone de "x" para fechar o modal -->
+                </button>
+            </div>
+            <div class="modal-body"> <!-- Corpo do modal -->
+                <p>Seu carrinho está vazio.</p> <!-- Parágrafo indicando que o carrinho está vazio -->
+            </div>
+            <div class="modal-footer"> <!-- Rodapé do modal -->
+                <button type="button" class="btn btn-claro">Limpar Carrinho</button> <!-- Botão para limpar o carrinho -->
+                <button type="button" class="btn btn-comprar">Finalizar Compra</button> <!-- Botão para finalizar a compra -->
+            </div>
+        </div>
+    </div>
+</div>
+
+ <!-- Size Selection Modal -->
+ <div class="modal fade" id="sizeModal" tabindex="-1" role="dialog" aria-labelledby="sizeModalLabel" aria-hidden="true"> <!-- Div para o modal com classes de fade, ID e atributos de acessibilidade -->
+    <div class="modal-dialog" role="document"> <!-- Div para o diálogo do modal -->
+        <div class="modal-content"> <!-- Div para o conteúdo do modal -->
+            <div class="modal-header"> <!-- Cabeçalho do modal -->
+                <h5 class="modal-title" id="sizeModalLabel">Selecione o Tamanho</h5> <!-- Título do modal com ID para acessibilidade -->
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <!-- Botão para fechar o modal -->
+                    <span aria-hidden="true">&times;</span> <!-- Ícone de "x" para fechar o modal -->
+                </button>
+            </div>
+            <div class="modal-body"> <!-- Corpo do modal -->
+                <form id="sizeForm"> <!-- Formulário com ID -->
+                    <div class="form-group"> <!-- Grupo de formulário -->
+                        <label for="sizeSelect">Tamanho</label> <!-- Rótulo para o campo de seleção de tamanho -->
+                        <select class="form-control" id="sizeSelect"> <!-- Campo de seleção de tamanho com classe e ID -->
+                            <option value="P">P</option> <!-- Opção para tamanho P -->
+                            <option value="M">M</option> <!-- Opção para tamanho M -->
+                            <option value="G">G</option> <!-- Opção para tamanho G -->
+                            <option value="GG">GG</option> <!-- Opção para tamanho GG -->
+                        </select>
+                    </div>
+                    <input type="hidden" id="productName"> <!-- Campo oculto para armazenar o nome do produto -->
+                    <input type="hidden" id="productPrice"> <!-- Campo oculto para armazenar o preço do produto -->
+                </form>
+            </div>
+            <div class="modal-footer"> <!-- Rodapé do modal -->
+                <button type="button" class="btn btn-claro">Cancelar</button> <!-- Botão para cancelar a ação -->
+                <button type="button" class="btn btn-comprar">Adicionar ao Carrinho</button> <!-- Botão para adicionar o produto ao carrinho -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Product Detail Section -->
+<main class="container my-5"> <!-- Elemento principal com classe de container e margem vertical -->
+    <div class="row"> <!-- Div para organizar conteúdo em linha -->
+        <div class="col-md-6 text-center"> <!-- Coluna ocupando 6 unidades em telas médias com texto centralizado -->
+            <img src="assets/img/products/12 (3)-Photoroom.png" alt="Camiseta Básica Branca" class="img-fluid product-image"> <!-- Imagem do produto com classe para tornar fluida -->
+        </div>
+        <div class="col-md-6"> <!-- Coluna ocupando 6 unidades em telas médias -->
+            <h2>Moletom Básico Preto</h1> <!-- Título do produto com classe de cabeçalho 2 -->
+            <p class="h4 text-muted">R$ 199,90</p> <!-- Preço do produto com classe de cabeçalho 4 e texto desativado -->
+            <div class="d-flex align-items-center mb-3"> <!-- Div para layout flexível e alinhamento com margem inferior -->
+                <span class="mr-2">★★★★★</span> <!-- Span para exibir as estrelas de avaliação com margem direita -->
+                <span>(28 Avaliações)</span> <!-- Span para exibir o número de avaliações -->
+            </div>
+            <p>em até 3x no cartão sem juros</p> <!-- Parágrafo indicando as condições de pagamento -->
+            <div class="mb-3">
+                <button class="btn btn-outline-secondary size-btn" onclick="selectSize('P')" data-size="P">P</button>
+                <button class="btn btn-outline-secondary size-btn" onclick="selectSize('M')" data-size="M">M</button>
+                <button class="btn btn-outline-secondary size-btn" onclick="selectSize('G')" data-size="G">G</button>
+                <button class="btn btn-outline-secondary size-btn" onclick="selectSize('XG')" data-size="XG">XG</button>
+            </div>
+            
+            <div class="d-flex align-items-center mb-3">
+                <div class="input-group quantity-box mr-3">
+                    <div class="input-group-prepend">
+                        <button class="btn btn-outline-secondary quantity-btn" type="button" onclick="decreaseQuantity()">-</button>
+                    </div>
+                    <input id="quantityInput" type="text" class="form-control text-center" value="1">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary quantity-btn" type="button" onclick="increaseQuantity()">+</button>
+                    </div>
+                </div>
+                <button class="btn btn-comprar" onclick="addToCart()">Comprar</button>
+            </div>
+            <div class="mt-3"> <!-- Div com margem superior -->
+                <input type="text" class="form-control mb-2" placeholder="CEP"> <!-- Campo de entrada para o CEP com margem inferior -->
+                <button class="btn btn-calcular">Calcular</button> <!-- Botão para calcular o frete -->
+            </div>
+        </div>
+    </div>
+    <div class="row mt-5"> <!-- Linha com margem superior -->
+        <div class="col-md-6"> <!-- Coluna ocupando 6 unidades em telas médias -->
+            <h3 class="h5">Tabela de medidas</h3> <!-- Cabeçalho com classe de cabeçalho 5 -->
+            <ul>
+                <li>P: Tórax 84 x Cintura 72</li> <!-- Item da lista com tamanho P -->
+                <li>M: Tórax 92 x Cintura 80</li> <!-- Item da lista com tamanho M -->
+                <li>G: Tórax 103 x Cintura 98</li> <!-- Item da lista com tamanho G -->
+                <li>XG: Tórax 116 x Cintura 102</li> <!-- Item da lista com tamanho XG -->
+            </ul>
+        </div>
+        <div class="col-md-6"> <!-- Coluna ocupando 6 unidades em telas médias -->
+            <h3 class="h5">Composição</h3> <!-- Cabeçalho com classe de cabeçalho 5 -->
+            <p>100% Algodão</p> <!-- Parágrafo indicando a composição do produto -->
+        </div>
+    </div>
+
+    <h2 class="produtosSelec">Produtos Relacionados</h2>
+
+    <div class="row mt-5"> <!-- Linha com margem superior -->
+        <div class="col-md-4 text-center"> <!-- Coluna ocupando 4 unidades em telas médias com texto centralizado -->
+            <img src="assets/img/products/product (2).png" alt="Camiseta Básica Cinza" class="img-fluid"> <!-- Imagem do produto com classe para tornar fluida -->
+            <p class="mt-2">Camiseta Básica Cinza</p> <!-- Parágrafo com margem superior indicando o nome do produto -->
+            <p>R$ 79,90</p> <!-- Parágrafo indicando o preço do produto -->
+        </div>
+        <div class="col-md-4 text-center"> <!-- Coluna ocupando 4 unidades em telas médias com texto centralizado -->
+            <img src="assets/img/products/product (5).png" alt="Camiseta Básica Preta" class="img-fluid"> <!-- Imagem do produto com classe para tornar fluida -->
+            <p class="mt-2">Camiseta Básica Preta</p> <!-- Parágrafo com margem superior indicando o nome do produto -->
+            <p>R$ 79,90</p> <!-- Parágrafo indicando o preço do produto -->
+        </div>
+        <div class="col-md-4 text-center"> <!-- Coluna ocupando 4 unidades em telas médias com texto centralizado -->
+            <img src="assets/img/products/product (1).png" alt="Camiseta Básica Preta" class="img-fluid"> <!-- Imagem do produto com classe para tornar fluida -->
+            <p class="mt-2">Camiseta Básica Branca</p> <!-- Parágrafo com margem superior indicando o nome do produto -->
+            <p>R$ 79,90</p> <!-- Parágrafo indicando o preço do produto -->
+        </div>
+    </div>
+</main>
+ <!-- Espaço vazio no final -->
+ <div class="spacer"></div> <!-- Div para criar um espaço vazio, possivelmente para layout ou espaçamento -->
+ 
+ <!-- Footer Section -->
+ <footer class="text-center py-5"> <!-- Rodapé da página com padding top e bottom de 5 unidades -->
+     <button class="buttont">TROCAS E DEVOLUÇÕES</button> <!-- Parágrafo com título de trocas e devoluções -->
+     <div class="social-icons mb-3"> <!-- Ícones sociais -->
+         <a href="#"><img src="assets/img/icon/whats.png" width="20" alt="WhatsApp"></a> <!-- Ícone do WhatsApp -->
+         <a href="#"><img src="assets/img/icon/mail.png" width="20" alt="Email"></a> <!-- Ícone de e-mail -->
+         <a href="https://www.instagram.com/nobugg7/"><img src="assets/img/icon/instagram.png" width="20" alt="Instagram"></a> <!-- Ícone do Instagram -->
+     </div>
+     <p class="direitos">Todos os direitos reservados à NoBug.</p> <!-- Texto de direitos reservados -->
+ </footer> <!-- Fim do rodapé -->
+ 
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script> <!-- Script para carregar a biblioteca jQuery -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script> <!-- Script para carregar a biblioteca Popper.js -->
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> <!-- Script para carregar o JavaScript do Bootstrap -->
+     <script src="assets/js/adicionarProdutoCarrinho.js"></script> <!-- Script personalizado para adicionar produtos ao carrinho -->
+ </body> <!-- Fim do corpo do documento -->
+ </html> <!-- Fim do documento HTML -->
