@@ -538,7 +538,7 @@ form .btn-finalizar:hover {
     background-color: #000000;
     color: #fff;
     font-size: 15px;
-    padding: 15px 30px;
+    padding: 10px 30px;
     border: 1px solid transparent;
     border-radius: 25px;
     font-weight: 600;
@@ -549,6 +549,7 @@ form .btn-finalizar:hover {
     margin-bottom: 20px;
     z-index: 3;
     font-family: 'sans-serif';
+    width: 180px;
 }
 .cont form{
     background-color: #fff;
@@ -643,6 +644,7 @@ a:link{
     cursor: pointer;
     margin-bottom: 20px;
     z-index: 3;
+    width: 180px;
     font-family: 'sans-serif';
 }
 .contain form{
