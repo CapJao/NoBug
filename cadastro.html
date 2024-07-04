@@ -1,31 +1,23 @@
-<!DOCTYPE html> <!-- Declaração do tipo de documento HTML -->
-
+<!DOCTYPE html>
 <html lang="pt-BR"> 
 
 <head>
-
-    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->   
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a viewport para controlar a escala e as dimensões em dispositivos móveis -->
-   
-
-    <title>Cadastre-se</title> <!-- Título da página que será exibido na aba do navegador -->   
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> <!-- Importa o CSS do Bootstrap para estilização -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"> <!-- Importa a fonte Poppins do Google Fonts -->
-    <link rel="stylesheet" href="styles.css"> <!-- Link para um arquivo CSS externo personalizado -->
-
+    <meta charset="UTF-8">   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastre-se</title>   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body> 
-    <!-- Início da Notificação -->
     <div id="notificationBanner" class="notification-banner">
         <span id="notificationMessage" class="text-success"></span>
         <button type="button" class="close" aria-label="Close" id="closeNotification">
             <span aria-hidden="true">&times;</span>
         </button>
     </div>
-    <!-- Fim da Notificação -->
 
-    <!-- Início do Cabeçalho -->
     <header class="container-fluid p-3 border-bottom header-fixed">
         <div class="d-flex justify-content-between align-items-center">
             <div class="menu-section">
@@ -47,9 +39,7 @@
             </div>
         </div>
     </header>
-    <!-- Fim do Cabeçalho -->
 
-    <!-- Início do Menu Popup -->
     <div id="popupMenu" class="popup-menu">
         <button class="close-btn">
             <img src="assets/img/icon/close.png" alt="Close" class="img-fluid">
@@ -65,53 +55,47 @@
             </div>
         </div>
     </div>
-    <!-- Fim do Menu Popup -->
 
     <div class="cont">
-        <div class="spacer"></div> 
-        <div>
-            <div class="caminho">
-                <p>Ínicio > Minha conta > Cadastre-se</p>
-            </div>
-          <form>
-                <h2>Cadastre-se</h2>
-                <input type="text" placeholder="Nome Completo">
-                <input type="email" placeholder="E-mail">
-                <input type="text" placeholder="Número de Telefone">
-                <input type="password" placeholder="Senha">
-                <input type="password" placeholder="Confirmar Senha">
-                <a href="confirmarcadastro.html"><button>CADASTRE-SE</button></a>
-                <div class="iniciar-sessao"><p>Já tem uma conta?</p>
+        <div class="spacer"></div>
+        <div class="caminho">
+            <a href="index.html">Início ></a>
+            <a href="login.html">Minha conta ></a>
+            <a href="cadastro.html">Cadastre-se</a>
+        </div>    
+        <form>
+            <h2>Cadastre-se</h2>
+            <input type="text" placeholder="Nome Completo">
+            <input type="email" placeholder="E-mail">
+            <input type="text" placeholder="Número de Telefone">
+            <input type="password" placeholder="Senha">
+            <input type="password" placeholder="Confirmar Senha">
+            <a href="confirmarcadastro.html"><button>CADASTRE-SE</button></a>
+            <div class="iniciar-sessao">
+                <p>Já tem uma conta?</p>
                 <a href="login.html">Iniciar Sessão</a>
-        </div>
-           </form>
-        </div>
-        </div> <!-- Fim do elemento principal -->
+            </div>
+        </form>
+    </div>
 
- 
     <div class="spacer"></div> 
     
-    <!-- Footer Section -->
-    <footer class="text-center py-5"> <!-- Rodapé da página com padding top e bottom de 5 unidades -->
-        <button class="buttont">TROCAS E DEVOLUÇÕES</button> <!-- Parágrafo com título de trocas e devoluções -->
-        <div class="social-icons mb-3"> <!-- Ícones sociais -->
-            <a href="#"><img src="assets/img/icon/whats.png" width="20" alt="WhatsApp"></a> <!-- Ícone do WhatsApp -->
-            <a href="#"><img src="assets/img/icon/mail.png" width="20" alt="Email"></a> <!-- Ícone de e-mail -->
-            <a href="https://www.instagram.com/nobugg7/"><img src="assets/img/icon/instagram.png" width="20" alt="Instagram"></a> <!-- Ícone do Instagram -->
+    <footer class="text-center py-5">
+        <a href="troca.html"><button class="buttont">TROCAS E DEVOLUÇÕES</button></a>
+        <div class="social-icons mb-3">
+            <a href="#"><img src="assets/img/icon/whats.png" width="20" alt="WhatsApp"></a>
+            <a href="#"><img src="assets/img/icon/mail.png" width="20" alt="Email"></a>
+            <a href="https://www.instagram.com/nobugg7/"><img src="assets/img/icon/instagram.png" width="20" alt="Instagram"></a>
         </div>
-        <p class="direitos">Todos os direitos reservados à NoBug.</p> <!-- Texto de direitos reservados -->
-    </footer> <!-- Fim do rodapé -->
+        <p class="direitos">Todos os direitos reservados à NoBug.</p>
+    </footer>
 
-
-<!-- Início dos Scripts -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="assets/js/adicionarProdutoCarrinho.js"></script>
-<script src="assets/js/abrirFecharMenuHamburger.js"></script>
-<script src="assets/js/movimentoHeader.js"></script>
-<script src="assets/js/mouseHover.js"></script>
-<!-- Fim dos Scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="assets/js/adicionarProdutoCarrinho.js"></script>
+    <script src="assets/js/abrirFecharMenuHamburger.js"></script>
+    <script src="assets/js/movimentoHeader.js"></script>
+    <script src="assets/js/mouseHover.js"></script>
 </body>
 </html>
-<!-- Fim do documento HTML -->
