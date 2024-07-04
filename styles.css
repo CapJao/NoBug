@@ -602,6 +602,11 @@ form .btn-finalizar:hover {
     font-size: 20px;
     font-family: 'sans-serif';
     margin-top: 50px;
+    
+
+}
+a:link{
+    text-decoration: none;
 }
 .trade{
     margin-bottom: 1%;
@@ -694,6 +699,7 @@ form .btn-finalizar:hover {
     font-weight: 600;
     letter-spacing: 0.3px;
 }
+
 /*Pagina Troca*/
 .container-trade{
     font-family: 'sans-serif';
