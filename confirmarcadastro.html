@@ -8,91 +8,121 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"> <!-- Importa a fonte Poppins do Google Fonts -->
     <link rel="stylesheet" href="styles.css"> <!-- Link para um arquivo CSS externo personalizado -->
 </head>
-<body> 
-    <!-- Corpo do documento HTML -->
-    <!-- Início do Banner de Notificação -->
-    <div id="notificationBanner" class="notification-banner">
-        <span id="notificationMessage" class="text-success"></span>
-        <button type="button" class="close" aria-label="Close" id="closeNotification">
-            <span aria-hidden="true">&times;</span>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NoBug - Bermuda Jeans</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- Início do Cabeçalho -->
+<header class="container-fluid p-3 border-bottom header-fixed">
+<div class="d-flex justify-content-between align-items-center">
+    <div class="menu-section">
+        <button class="navbar-toggler d-block d-md-none" type="button">
+            <span class="navbar-toggler-icon"></span>
         </button>
-    </div>
-    <!-- Fim do Banner de Notificação -->
-
-    <!-- Início do Cabeçalho -->
-    <header class="container-fluid p-3 border-bottom">
-        <div class="d-flex justify-content-between align-items-center">
-            <div class="d-flex">
-                <a href="index.html" class="mr-3">Home</a>
-                <a href="login.html">My Account</a>
-            </div>
-            <div class="text-center">
-                <img src="assets/img/logo/logo.png" alt="NoBug Logo" class="img-fluid logo"> <!-- Logotipo da NoBug -->
-            </div>
-            <div class="d-flex justify-content-end align-items-center">
-                <a href="#" id="cart-icon" data-toggle="modal" data-target="#cartModal">
-                    <img src="assets/img/icon/carrinho.png" width="35" alt="Cart" class="img-fluid"> <!-- Ícone do carrinho de compras -->
-                </a>
-            </div>
-        </div>
-    </header>
-    <!-- Fim do Cabeçalho -->
-
-    <!-- Início do Modal do Carrinho -->
-    <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="cartModalLabel">Carrinho de Compras</h5> <!-- Título do modal -->
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p>Seu carrinho está vazio.</p> <!-- Mensagem informando que o carrinho está vazio -->
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-claro">Limpar Carrinho</button> <!-- Botão para limpar o carrinho -->
-                    <button type="button" class="btn btn-comprar">Finalizar Compra</button> <!-- Botão para finalizar a compra -->
-                </div>
-            </div>
+        <div class="d-none d-md-flex">
+            <a href="index.html" class="mr-3">Home</a>
+            <a href="login.html">My Account</a>
         </div>
     </div>
-    <!-- Fim do Modal do Carrinho -->
+    <div class="logo-section text-center">
+        <a href="index.html"><img src="assets/img/logo/logo.png" alt="NoBug Logo" class="img-fluid logo"></a>
+    </div>
+    <div class="cart-section d-flex justify-content-end align-items-center">
+        <a href="#" id="cart-icon" data-toggle="modal" data-target="#cartModal">
+            <img src="assets/img/icon/carrinho.png" width="35" alt="Cart" class="img-fluid">
+            <span id="cart-count" class="cart-count">0</span>
+        </a>
+    </div>
+</div>
+</header>
+<!-- Fim do Cabeçalho -->
 
-    <!-- Início do Modal de Seleção de Tamanho -->
-    <div class="modal fade" id="sizeModal" tabindex="-1" role="dialog" aria-labelledby="sizeModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="sizeModalLabel">Selecione o Tamanho</h5> <!-- Título do modal -->
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form id="sizeForm"> <!-- Formulário para seleção de tamanho -->
-                        <div class="form-group">
-                            <label for="sizeSelect">Tamanho</label>
-                            <select class="form-control" id="sizeSelect">
-                                <option value="P">P</option>
-                                <option value="M">M</option>
-                                <option value="G">G</option>
-                                <option value="GG">GG</option>
-                            </select>
-                        </div>
-                        <input type="hidden" id="productName"> <!-- Campo oculto para o nome do produto -->
-                        <input type="hidden" id="productPrice"> <!-- Campo oculto para o preço do produto -->
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-claro">Cancelar</button> <!-- Botão para cancelar -->
-                    <button type="button" class="btn btn-comprar">Adicionar ao Carrinho</button> <!-- Botão para adicionar ao carrinho -->
-                </div>
-            </div>
+<!-- Início do Menu Popup -->
+<div id="popupMenu" class="popup-menu">
+<button class="close-btn">
+    <img src="assets/img/icon/close.png" alt="Close" class="img-fluid">
+</button>
+<div class="popup-content">
+    <a href="index.html">Home</a>
+    <a href="login.html">Minha Conta</a>
+    <a href="troca.html">Trocas e Devoluções</a>
+    <div class="social-icons mt-5">
+        <a href="#"><img src="assets/img/icon/whats.png" width="30" alt="WhatsApp"></a>
+        <a href="#"><img src="assets/img/icon/mail.png" width="30" alt="Email"></a>
+        <a href="https://www.instagram.com/nobugg7/"><img src="assets/img/icon/instagram.png" width="30" alt="Instagram"></a>
+    </div>
+</div>
+</div>
+<!-- Fim do Menu Popup -->
+
+<!-- Início do Modal do Carrinho -->
+<div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered modal-lg-custom" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="cartModalLabel">Carrinho de Compras</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <p>Seu carrinho está vazio.</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-claro" id="clearCartButton">Limpar Carrinho</button>
+            <button type="button" class="btn btn-comprar">Finalizar Compra</button>
         </div>
     </div>
-    <!-- Fim do Modal de Seleção de Tamanho -->
+</div>
+</div>
+<!-- Fim do Modal do Carrinho -->
+
+<!-- Início da Notificação -->
+<div id="notificationBanner" class="notification-banner">   
+<span id="notificationMessage" class="text-success"></span>
+<button type="button" class="close" aria-label="Close" id="closeNotification">
+    <span aria-hidden="true">&times;</span>
+</button>
+</div>
+<!-- Fim da Notificação -->
+
+<!-- Size Selection Modal -->
+<div class="modal fade" id="sizeModal" tabindex="-1" role="dialog" aria-labelledby="sizeModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="sizeModalLabel">Selecione o Tamanho</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <form id="sizeForm">
+                <div class="form-group">
+                    <label for="sizeSelect">Tamanho</label>
+                    <select class="form-control" id="sizeSelect">
+                        <option value="P">P</option>
+                        <option value="M">M</option>
+                        <option value="G">G</option>
+                        <option value="GG">GG</option>
+                    </select>
+                </div>
+                <input type="hidden" id="productName">
+                <input type="hidden" id="productPrice">
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-claro" data-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-comprar" id="addToCartButton">Adicionar ao Carrinho</button>
+        </div>
+    </div>
+</div>
+</div>
 
     <!-- Início do Conteúdo Principal -->
     <main class="container mt-5">
@@ -117,7 +147,8 @@
     <!-- Espaço vazio no final -->
     <div class="spacer"></div> <!-- Espaço vazio usado para separação visual -->
 
-     <footer class="text-center py-5">
+    <!-- Footer Section -->
+    <footer class="text-center py-5">
         <a href="troca.html"><button class="buttont">TROCAS E DEVOLUÇÕES</button></a>
         <div class="social-icons mb-3">
             <a href="#"><img src="assets/img/icon/whats.png" width="20" alt="WhatsApp"></a>
@@ -127,11 +158,16 @@
         <p class="direitos">Todos os direitos reservados à NoBug.</p>
     </footer>
 
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script> <!-- Script jQuery slim -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script> <!-- Script Popper.js -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> <!-- Script Bootstrap -->
-    <script src="assets/js/adicionarProdutoCarrinho.js"></script> <!-- Script personalizado para adicionar produto ao carrinho -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="assets/js/buttonsproduct.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="assets/js/adicionarProdutoCarrinho.js"></script>
+    <script src="assets/js/abrirFecharMenuHamburger.js"></script>
+    <script src="assets/js/movimentoHeader.js"></script>
+    <script src="assets/js/mouseHover.js"></script>
 </body>
 </html>
-<!-- Fim do documento HTML -->
